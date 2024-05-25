@@ -11,40 +11,37 @@ using UnityEngine.UI;
  TODO: 
  ◦ При проходження рівня буде програна запис Микити
    «ГОООООООООООООООООООООООООООООООООООЛ»
+
  ◦ Пересування +
- ◦ ухиляння
+ ◦ ухиляння +
+
  ◦ атаки ближнього бою
     ▪ Буде один Шампур як основна та єдина зброя.
         ▪ Можливо його посилити отримаючі його з противників, але
           зменшує швидкість атаки
+
  ◦ здоров’я +
+
     ▪ При нульовому здоров'ї ігрок програє
+
  ◦ емоційний настрій (придатись журбі або радості) +
      ▪ Зменшення рівня при отримані урону +
      ▪ Зменшення рівня з часом +
-     ▪ Зміна рівня ролі керування героям ігроком
-         • При журбі — зменшується
-         • При радості - звеличується
- ◦ самогубство
-    ▪ Намагання головного героя погубити себе в незалежності від команд 
+     ▪ Зміна рівня ролі керування героям ігроком +
+         • При журбі — зменшується +
+         • При радості - звеличується +
+ ◦ самогубство +
+    ▪ Намагання головного героя погубити себе в незалежності від команд +
  
  */
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private float health = 100.0f;
-
-    [field: SerializeField]
-    public float emotion_level { get; private set; } = 100.0f;
+    [field: SerializeField] public float emotion_level { get; private set; } = 100.0f;
     [SerializeField] private float speed_change_emotion = 1.0f;
 
     public bool is_dead { get { return health <= 0; } }
-
-    /*//TEST
-    private bool IsAvailable = true;
-    private float CooldownDuration = 1.0f;
-    public float get_damage = 15.0f;
-    //*/
 
     private void Start()
     {
@@ -52,9 +49,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        //changeEmotionTime();
-        /*if (Input.GetKey(KeyCode.K))
-            UseAbility();*/
+        changeEmotionTime();
     }
 
     private void FixedUpdate()
@@ -90,28 +85,4 @@ public class Player : MonoBehaviour
         health -= damage;
     }
 
-    /*//TEST
-    void UseAbility()
-    {
-        // if not available to use (still cooling down) just exit
-        if (IsAvailable == false)
-        {
-            return;
-        }
-
-        getDamage(get_damage);
-
-        // start the cooldown timer
-        StartCoroutine(StartCooldown());
-    }
-
-    public IEnumerator StartCooldown()
-    {
-        IsAvailable = false;
-
-        yield return new WaitForSeconds(CooldownDuration);
-
-        IsAvailable = true;
-    }
-    *///
 }

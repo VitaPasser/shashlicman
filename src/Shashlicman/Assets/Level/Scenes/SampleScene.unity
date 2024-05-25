@@ -156,6 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 2
   enemy: {fileID: 1580869490}
+  evasion_speed_coefficient: 40
+  evasion_cooldown_period: 1
 --- !u!1 &64874932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,11 +1945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2099677725850733022, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.35
+      value: 3.68
       objectReference: {fileID: 0}
     - target: {fileID: 2099677725850733022, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.29
+      value: 2.87
       objectReference: {fileID: 0}
     - target: {fileID: 2099677725850733022, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
       propertyPath: m_LocalPosition.z
