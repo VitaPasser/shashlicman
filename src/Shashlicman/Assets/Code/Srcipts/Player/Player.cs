@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /*
@@ -22,7 +23,7 @@ using UnityEngine.UI;
 
  ◦ здоров’я +
 
-    ▪ При нульовому здоров'ї ігрок програє
+    ▪ При нульовому здоров'ї ігрок програє +
 
  ◦ емоційний настрій (придатись журбі або радості) +
      ▪ Зменшення рівня при отримані урону +
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float health = 100.0f;
     [field: SerializeField] public float emotion_level { get; private set; } = 100.0f;
     [SerializeField] private float speed_change_emotion = 1.0f;
+    [SerializeField] private bool is_down_emotion_level = true;
 
     public bool is_dead { get { return health <= 0; } }
 
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         changeEmotionTime();
+        if (Input.GetKeyUp(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void FixedUpdate()
@@ -58,6 +61,7 @@ public class Player : MonoBehaviour
 
     void changeEmotionTime()
     {
+        if (!is_down_emotion_level) return;
         if (is_dead) return;
         if (emotion_level <= 0)
         {

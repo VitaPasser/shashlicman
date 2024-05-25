@@ -62,7 +62,7 @@ public class Movement : MonoBehaviour
 
     private float useEvasion()
     {
-        if(IsAvailable == false)
+        if(IsAvailable == false || (player.emotion_level < 30))
         {
             return 1;
         }

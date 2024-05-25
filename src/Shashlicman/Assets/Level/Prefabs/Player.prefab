@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 5980513155828915513}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.0873747, y: 4.4953485, z: -0.016796697}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95,9 +95,12 @@ GameObject:
   - component: {fileID: 2099677725850733022}
   - component: {fileID: 1259707104304369566}
   - component: {fileID: 7518182147866852089}
+  - component: {fileID: 1773585689591339004}
+  - component: {fileID: 2437449090373039560}
+  - component: {fileID: 6169581936534072412}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +153,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.0911436, y: 4.5414314}
+  m_Offset: {x: 0.03013435, y: 0.060110092}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.96614456, y: 1.3477225}
+  m_Size: {x: 0.90587586, y: 1.3808889}
   m_EdgeRadius: 0
 --- !u!50 &7518182147866852089
 Rigidbody2D:
@@ -189,4 +192,48 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &1773585689591339004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873292123421261737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3844014310e0b234bb065c594de01ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  <emotion_level>k__BackingField: 100
+  speed_change_emotion: 1
+  is_down_emotion_level: 1
+--- !u!114 &2437449090373039560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873292123421261737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1482beb1d47dc41828755d87045c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 2
+  enemy: {fileID: 3494020887542723793, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
+  evasion_speed_coefficient: 40
+  evasion_cooldown_period: 1
+--- !u!114 &6169581936534072412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873292123421261737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e335ec9d9a38bf4b892517fed894c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
