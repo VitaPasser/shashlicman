@@ -316,3 +316,88 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 570.196163 seconds.
+  path: Assets/Level/Prefabs/Player.prefab
+  artifactKey: Guid(080a3fe7736629a46a91a03e84dad6b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Level/Prefabs/Player.prefab using Guid(080a3fe7736629a46a91a03e84dad6b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b948ac3d768acb1e45ef43f01f205369') in 0.139888 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 24.791489 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (1).prefab
+  artifactKey: Guid(a1b20cb36f7f8ed47bf821f401e0cfda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (1).prefab using Guid(a1b20cb36f7f8ed47bf821f401e0cfda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dfcecb4d14867908ae88d8be68b7313') in 0.001827 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.007596 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (2).prefab
+  artifactKey: Guid(3a6005217c061c24f9233a319d1d4194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (2).prefab using Guid(3a6005217c061c24f9233a319d1d4194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd54afb7cdf7f78186d3a47d9a4854e53') in 0.002547 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (4).prefab
+  artifactKey: Guid(eb46ebe3b1d09a243844e9d292c70d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (4).prefab using Guid(eb46ebe3b1d09a243844e9d292c70d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d9d68c9e5ffd00a2a5c7d3b38c63911') in 0.002996 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (7).prefab
+  artifactKey: Guid(e20eb2c94ce04da46836e348e490cb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (7).prefab using Guid(e20eb2c94ce04da46836e348e490cb36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6458f906fdf4d7b62dd88b312d1dc009') in 0.002372 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (10).prefab
+  artifactKey: Guid(342d0981b684125418018d06e8eca9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (10).prefab using Guid(342d0981b684125418018d06e8eca9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '881637fd96273bdaad73bd53d8e92cdd') in 0.002531 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (12).prefab
+  artifactKey: Guid(c6cb0185e0b9feb4f8bf4b7272c86fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (12).prefab using Guid(c6cb0185e0b9feb4f8bf4b7272c86fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2c3612ccba787c1361f3a2529ea54cf') in 0.002178 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (9).prefab
+  artifactKey: Guid(3c415577ca597024987806861f0429bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (9).prefab using Guid(3c415577ca597024987806861f0429bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c837899c871a5cbaf2a3d9256f6b0f7') in 0.001954 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (17).prefab
+  artifactKey: Guid(908ca2e4193ab234d8d24042ec396f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (17).prefab using Guid(908ca2e4193ab234d8d24042ec396f3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c7b63d371f1b560c70ed53238f8b123') in 0.004240 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/Models/EnemyMoveSpots/GameObject (13).prefab
+  artifactKey: Guid(d9bca00420903f94ba88a7e32f35e43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Models/EnemyMoveSpots/GameObject (13).prefab using Guid(d9bca00420903f94ba88a7e32f35e43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785561a755ef2a159f536e4edd7d604c') in 0.001893 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
