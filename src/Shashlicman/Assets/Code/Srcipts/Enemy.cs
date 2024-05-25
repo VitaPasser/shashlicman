@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
         if (playerGameObject != null)

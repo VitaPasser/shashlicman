@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
 
     private readonly float customE = math.E - 1.512f;
 
-    [SerializeField] private float evasion_speed_coefficient = 4f;
+    [SerializeField] private float evasion_speed_coefficient = 40f;
     [SerializeField] private float evasion_cooldown_period = 1f;
     private bool IsAvailable = true;
 
@@ -42,13 +42,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (player.is_dead)
-        {
-            movementDirection = Vector2.zero;
-            return;
-        }
-
-        movementDirection = move();
 
     }
 
@@ -69,8 +62,12 @@ public class Movement : MonoBehaviour
 
     private float useEvasion()
     {
+        if(IsAvailable == false)
+        {
+            return 1;
+        }
 
-        if (Input.GetButton("Evasion") && (IsAvailable == true))
+        if (Input.GetButton("Evasion"))
         {
             StartCoroutine(StartCooldown());
             return evasion_speed_coefficient;
@@ -117,6 +114,14 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (player.is_dead)
+        {
+            movementDirection = Vector2.zero;
+        } else
+        {
+            movementDirection = move();
+        }
+
         rb.velocity = movementDirection * movementSpeed;
     }
 
