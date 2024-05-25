@@ -34,8 +34,10 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float health = 100.0f;
 
-    [SerializeField] private float emotion_level = 100.0f;
+    [field: SerializeField]
+    public float emotion_level { get; private set; } = 100.0f;
     [SerializeField] private float speed_change_emotion = 1.0f;
+
     public bool is_dead { get { return health <= 0; } }
 
     /*//TEST
@@ -50,7 +52,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        changeEmotionTime();
+        //changeEmotionTime();
         /*if (Input.GetKey(KeyCode.K))
             UseAbility();*/
     }

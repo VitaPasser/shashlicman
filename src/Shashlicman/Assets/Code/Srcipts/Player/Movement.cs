@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 /*
  * Робив Віталій
@@ -21,16 +23,15 @@ public class Movement : MonoBehaviour
     [SerializeField] private float movementSpeed = 2.0f;
     private Rigidbody2D rb;
     private Player player;
+    [SerializeField] private Enemy enemy;
     private Vector2 movementDirection;
-    public float control_level { get; set; }
+    private float control_level { get => player.emotion_level / 100.0f; }
     private float power_control_level = 0;
-    public float critical_level = 0.2f;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GetComponent<Player>();
-        control_level = 1f;
     }
 
     void Update()
@@ -46,41 +47,47 @@ public class Movement : MonoBehaviour
         float x_player = Input.GetAxis("Horizontal");
         float y_player = Input.GetAxis("Vertical");
 
-        float x_badSpirit = 5f;
-        float y_badSpirit = -5f;
+        float scalara_x = math.abs(enemy.transform.position.x - player.transform.position.x);
+        float scalara_y = math.abs(enemy.transform.position.y - player.transform.position.y);
 
-        float min_x_player = x_player / math.E;
-        float min_y_player = y_player / math.E;
+        if (enemy.transform.position.x < player.transform.position.x)
+            scalara_x = -scalara_x;
 
-        float max_x_player = x_player - min_x_player;
-        float max_y_player = y_player - min_y_player;
+        if (enemy.transform.position.y < player.transform.position.y)
+            scalara_y = -scalara_y;
 
-        x_player = x_player / math.E * power_control_level - min_x_player;
-        y_player = y_player / math.E * power_control_level - min_y_player;
+        float x_badSpirit = scalara_x;
+        float y_badSpirit = scalara_y;
 
-        float min_x_badSpirit = x_badSpirit / math.E;
-        float min_y_badSpirit = y_badSpirit / math.E;
+        x_player = x_player / math.E * power_control_level;
+        y_player = y_player / math.E * power_control_level;
+        x_badSpirit = x_badSpirit / power_control_level - x_badSpirit / math.E;
+        y_badSpirit = y_badSpirit / power_control_level - y_badSpirit / math.E;
 
-        float max_x_badSpirit = x_badSpirit - min_x_badSpirit;
-        float max_y_badSpirit = y_badSpirit - min_y_badSpirit;
+        movementDirection = movement(x_player, y_player, x_badSpirit, y_badSpirit);
 
-        x_badSpirit = x_badSpirit / math.E * power_control_level - min_x_badSpirit;
-        y_badSpirit = y_badSpirit / math.E * power_control_level - min_y_badSpirit;
-
-        float x_movementDirection = (x_player - x_badSpirit) / 2;
-        float y_movementDirection = (y_player - y_badSpirit) / 2;
-
-        /*Vector2 playerMovementDirection = (new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")))/ math.E;
-        Vector2 badSpiritMovementDirection = (new Vector2(x_badSpirit, y_badSpirit));
-
-        playerMovementDirection *= power_control_level;*/
-
-        movementDirection = new Vector2(x_movementDirection, y_movementDirection);
-        
     }
+
+
 
     private void FixedUpdate()
     {
         rb.velocity = movementDirection * movementSpeed;
+    }
+
+    private Vector2 movement(float x_p, float y_p, float x_b, float y_b)
+    {
+        float x_result = 0, y_result = 0;
+        x_result = isSameSign(x_p, x_b);
+        y_result = isSameSign(y_p, y_b);
+        return new Vector2(x_result, y_result);
+    }
+
+    private float isSameSign(float x, float y)
+    {
+        if (x == math.abs(x) && (y == math.abs(y) ||
+            (-x == math.abs(x) && (-y == math.abs(y)))))
+            return math.max(x, y);
+        return x + y;
     }
 }

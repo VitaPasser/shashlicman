@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  emotion_level: 100
+  <emotion_level>k__BackingField: 100
   speed_change_emotion: 1
 --- !u!114 &54536213
 MonoBehaviour:
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  critical_level: 0.2
+  enemy: {fileID: 1580869490}
 --- !u!1 &64874932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1243,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1671017408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580869490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3494020887542723793, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
+  m_PrefabInstance: {fileID: 3339401262403932167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1944c4b46b94e1b4888e331132052cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1583775978
 GameObject:
   m_ObjectHideFlags: 0
