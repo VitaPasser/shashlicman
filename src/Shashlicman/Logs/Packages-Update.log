@@ -1,5 +1,5 @@
 
-=== Sat May 25 10:46:18 2024
+=== Sat May 25 11:46:20 2024
 
 Packages were changed.
 Update Mode: mergeDefaultDependencies
@@ -42,4 +42,4 @@ The following packages were updated:
   com.unity.ide.rider from version 3.0.18 to 3.0.28
   com.unity.ide.visualstudio from version 2.0.17 to 2.0.22
   com.unity.timeline from version 1.7.3 to 1.7.6
-  com.unity.visualscripting from version 1.8.0 to 1.9.2
+  com.unity.visualscripting from version 1.8.0 to 1.9.4
