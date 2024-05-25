@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class Scene : MonoBehaviour
 {
+    public GameObject Restart;
     public GameObject player;
+
     // Start is called before the first frame update
+    [System.Obsolete]
     void Start()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
+        if (objs.Length != 0 && objs[0].GetComponent<Player>().is_dead)
+        {
+            Restart.SetActiveRecursively(false);
+            Destroy(objs[0]);
+            Instantiate(player, new Vector3(3.68f, 2.87f, 0.0167967f), Quaternion.identity);
+        }
         if (objs.Length == 0 )
         {
             Instantiate(player, new Vector3(3.68f, 2.87f, 0.0167967f), Quaternion.identity);
