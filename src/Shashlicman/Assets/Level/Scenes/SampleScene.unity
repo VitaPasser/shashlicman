@@ -509,6 +509,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1671017408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &327479378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5980513155828915513, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
+  m_PrefabInstance: {fileID: 2373131434184856389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &356002113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,6 +2017,10 @@ PrefabInstance:
       propertyPath: startWaiteTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3494020887542723793, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
+      propertyPath: playerGameObject
+      value: 
+      objectReference: {fileID: 327479378}
     - target: {fileID: 3494020887542723793, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
       propertyPath: MoveSpots.Array.size
       value: 18
