@@ -779,7 +779,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Restart: {fileID: 626451488}
   player: {fileID: 7873292123421261737, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
-  covers: {fileID: 0}
 --- !u!1 &577638111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,13 +1254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fac31db127f33d48918d736957fa29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockPrefab: {fileID: 0}
-  minBlocks: 2
-  maxBlocks: 4
-  spawnAreaMin: {x: 0, y: 0}
-  spawnAreaMax: {x: 0, y: 0}
-  minDistance: 1.5
-  spawnedPositions: []
 --- !u!4 &1460288434
 Transform:
   m_ObjectHideFlags: 0
@@ -1289,11 +1281,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d7d238b7529cc498eae8bf12eb937a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coversPrefab: {fileID: 0}
+  coversPrefab: {fileID: 2246364182575570640, guid: a5546f6352a79c949b62d6cf206aef09, type: 3}
   minCovers: 2
   maxCovers: 4
-  spawnAreaMin: {x: 0, y: 0}
-  spawnAreaMax: {x: 0, y: 0}
+  spawnAreaMin: {x: -5.5, y: -3}
+  spawnAreaMax: {x: 5, y: 2}
   minDistance: 1.5
 --- !u!1 &1583775978
 GameObject:

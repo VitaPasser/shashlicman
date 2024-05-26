@@ -88,7 +88,8 @@ public class Movement : MonoBehaviour
 
     private float toVector(float enemy_x, float player_x)
     {
-        float scalara_x = math.abs(enemy_x - player_x) + Random.Range(-20, 20);
+        float scalara_x = math.abs(enemy_x - player_x);
+        scalara_x += scalara_x * Random.Range(-10, 10);
 
         if (enemy_x < player_x)
             scalara_x = -scalara_x;
@@ -99,12 +100,12 @@ public class Movement : MonoBehaviour
 
     private float moveCoefficientPlayer(float x, float power_control_level)
     {
-        return x / customE * power_control_level;
+        return x / customE * power_control_level - x/customE;
     }
 
     private float moveCoefficientBadSpirit(float x, float power_control_level)
     {
-        return x / power_control_level - x / customE;
+        return - power_control_level / x  + customE / x;
     }
 
     private float customExp(float x)

@@ -6,7 +6,7 @@ public class Scene : MonoBehaviour
 {
     public GameObject Restart;
     public GameObject player;
-    public Covers covers;
+    private Covers covers;
 
     // Start is called before the first frame update
     [System.Obsolete]
