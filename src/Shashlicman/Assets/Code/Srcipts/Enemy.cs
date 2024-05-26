@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,6 +17,7 @@ public class Enemy : MonoBehaviour
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
         agent.SetDestination(objs[0].transform.position);
+        
     }
 
 }

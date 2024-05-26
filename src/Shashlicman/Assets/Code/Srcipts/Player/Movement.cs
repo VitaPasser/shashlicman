@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -20,18 +19,19 @@ public class Movement : MonoBehaviour
     [SerializeField] private float movementSpeed = 2.0f;
     private Rigidbody2D rb;
     private Player player;
+    [SerializeField] private Enemy enemy;
     private Vector2 movementDirection;
     private float control_level { get => player.emotion_level / 100.0f; }
+
+    private readonly float customE = math.E - 1.512f;
 
     [SerializeField] private float evasion_speed_coefficient = 40f;
     [SerializeField] private float evasion_cooldown_period = 1f;
     private bool IsAvailable = true;
-    public LayerMask myLayerMask;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         player = GetComponent<Player>();
     }
 
@@ -40,41 +40,19 @@ public class Movement : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        if (player.is_dead)
-        {
-            movementDirection = Vector2.zero;
-        }
-        else
-        {
-            movementDirection = move();
-        }
-
-        rb.velocity = movementDirection * movementSpeed * useEvasion();
-    }
-
     private Vector2 move()
     {
-        float power_control_level = math.exp(control_level);
+        float power_control_level = customExp(control_level);
 
-        Vector2 playerv2 = new Vector2(moveCoefficientPlayer(Input.GetAxis("Horizontal"), power_control_level), moveCoefficientPlayer(Input.GetAxis("Vertical"), power_control_level));
+        float evasion_coefficient = useEvasion();
 
-        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
-        List<Vector2> scalars = new List<Vector2>(); 
+        float x_player = evasion_coefficient * moveCoefficientPlayer(Input.GetAxis("Horizontal"), power_control_level);
+        float y_player = evasion_coefficient * moveCoefficientPlayer(Input.GetAxis("Vertical"), power_control_level);
 
-        foreach (GameObject enemy in enemys)
-        {
-            scalars.Add(enemy.transform.position - gameObject.transform.position);
-        }
+        float x_badSpirit = moveCoefficientBadSpirit(toVector(enemy.transform.position.x, player.transform.position.x), power_control_level);
+        float y_badSpirit = moveCoefficientBadSpirit(toVector(enemy.transform.position.y, player.transform.position.y), power_control_level);
 
-        Vector2 badSpiritv = scalars.Max().normalized;
-
-        badSpiritv = new Vector2(moveCoefficientBadSpirit(badSpiritv.x, power_control_level), moveCoefficientBadSpirit(badSpiritv.y, power_control_level));
-        badSpiritv.x *= Random.Range(-1f, 9f);
-        badSpiritv.y *= Random.Range(-1f, 9f);
-
-        return badSpiritv + playerv2;
+        return normalisationVector(x_player, y_player, x_badSpirit, y_badSpirit);
     }
 
     private float useEvasion()
@@ -103,13 +81,63 @@ public class Movement : MonoBehaviour
         IsAvailable = true;
     }
 
+    private float toVector(float enemy_x, float player_x)
+    {
+        float scalara_x = math.abs(enemy_x - player_x);
+        scalara_x += scalara_x * Random.Range(-10, 10);
+
+        if (enemy_x < player_x)
+            scalara_x = -scalara_x;
+
+        return scalara_x;
+    }
+    
+
     private float moveCoefficientPlayer(float x, float power_control_level)
     {
-        return x * (power_control_level / math.E - (1 - control_level) /math.E) * 2f;
+        return x / customE * power_control_level - x/customE;
     }
 
     private float moveCoefficientBadSpirit(float x, float power_control_level)
     {
-        return x * ((math.E - power_control_level) / math.E - ((math.E - 2) / math.E) * (1-control_level)) * 0.5f;
+        return - power_control_level / x  + customE / x;
+    }
+
+    private float customExp(float x)
+    {
+        return math.pow(customE, x);
+    }
+
+    private void FixedUpdate()
+    {
+        if (player.is_dead)
+        {
+            movementDirection = Vector2.zero;
+        } else
+        {
+            movementDirection = move();
+        }
+
+        rb.velocity = movementDirection * movementSpeed;
+    }
+
+    private Vector2 normalisationVector(float x_p, float y_p, float x_b, float y_b)
+    {
+        float x_result = 0, y_result = 0;
+        x_result = isSameSign(x_p, x_b);
+        y_result = isSameSign(y_p, y_b);
+        return new Vector2(x_result, y_result);
+    }
+
+    private float isSameSign(float x, float y)
+    {
+        if (x == 0 || (y == 0))
+            return x + y;
+
+        if (x == math.abs(x) && (y == math.abs(y) ||
+            (-x == math.abs(x) && (-y == math.abs(y)))))
+            return math.max(x, y);
+
+        return x + y;
     }
 }
