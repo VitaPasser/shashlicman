@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3764730875404756996}
   - component: {fileID: 5570837122341050397}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 20240519_160159-removebg-preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1773585689591339004}
   - component: {fileID: 2437449090373039560}
   - component: {fileID: 6169581936534072412}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 7873292123421261737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5873746, y: -1.7453483, z: 0.016796697}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -229,6 +229,9 @@ MonoBehaviour:
   enemy: {fileID: 3494020887542723793, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
   evasion_speed_coefficient: 40
   evasion_cooldown_period: 1
+  myLayerMask:
+    serializedVersion: 2
+    m_Bits: 51
 --- !u!114 &6169581936534072412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6412033724361277221}
   - component: {fileID: 4164596186601787815}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ScopeAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

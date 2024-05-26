@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3494020887542723793}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,30 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1944c4b46b94e1b4888e331132052cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGameObject: {fileID: 7873292123421261737, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
-  MoveSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  waitTime: 0
-  startWaiteTime: 2
-  speed: 2
-  curranTspeed: 0
 --- !u!1 &8484281234337751907
 GameObject:
   m_ObjectHideFlags: 0
