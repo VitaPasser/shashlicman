@@ -61,8 +61,7 @@ public class Covers : MonoBehaviour
             // ���� ������� ��������, ������� ������� � ��������� ������� � ������
             if (!tooClose)
             {
-                Instantiate(coversPrefab, spawnPosition, Quaternion.identity);
-                spawnedPositions.Add(spawnPosition);
+                
                 return;
             }
         }
