@@ -12,10 +12,6 @@ public class Scene : MonoBehaviour
     [System.Obsolete]
     void Start()
     {
-        covers = GameObject.FindWithTag("Covers").GetComponent<Covers>();
-        covers.SpawnCovers();
-
-
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
         if (objs.Length != 0 && objs[0].GetComponent<Player>().is_dead)
         {
@@ -27,6 +23,9 @@ public class Scene : MonoBehaviour
         {
             Instantiate(player, new Vector3(3.68f, 2.87f, 0.0167967f), Quaternion.identity);
         }
+
+        covers = GameObject.FindWithTag("Covers").GetComponent<Covers>();
+        covers.SpawnCovers();
     }
 
     // Update is called once per frame
