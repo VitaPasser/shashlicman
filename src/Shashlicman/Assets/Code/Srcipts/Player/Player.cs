@@ -48,11 +48,25 @@ public class Player : MonoBehaviour
     private bool IsAvailable = true;
     private CircleCollider2D circleCollider;
 
+    private List<MoraleUpper> morales;
+
     public bool is_dead { get { return health <= 0; } }
+
+    public void addEmotionLevel (float add_emotion_level, MoraleUpper morale)
+    {
+        emotion_level += add_emotion_level;
+        morales.Add(morale);
+        int count_morale = morales.FindAll(obj => obj.name == morale.name).Count;
+        speed_change_emotion += count_morale * morale.coefficient_speed_change_emotion;
+        emotion_level -= count_morale * morale.coefficient_damage_added_morale;
+
+        if (emotion_level > 100) emotion_level = 100; 
+    }
 
     private void Start()
     {
         circleCollider = gameObject.GetComponentInChildren<CircleCollider2D>();
+        morales = new List<MoraleUpper>();
     }
 
     void Update()
