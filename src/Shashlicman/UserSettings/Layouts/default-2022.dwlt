@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 108
+  controlID: 41
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 453
     height: 957
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 80ceffff
-      m_LastClickedID: -12672
-      m_ExpandedIDs: d0e5ffff1afbfffff4ffffff
+      m_SelectedIDs: ecbdffff
+      m_LastClickedID: -16916
+      m_ExpandedIDs: 1afbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -806,9 +806,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.1320112, y: 2.6661868, z: -0.0959814}
+    m_Target: {x: 1.5467131, y: 0.20733982, z: -0.1463129}
     speed: 2
-    m_Value: {x: -3.1320112, y: 2.6661868, z: -0.0959814}
+    m_Value: {x: 1.5467131, y: 0.20733982, z: -0.1463129}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -858,9 +858,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.8725355
+    m_Target: 7.9056945
     speed: 2
-    m_Value: 2.8725355
+    m_Value: 7.9056945
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -936,10 +936,10 @@ MonoBehaviour:
     m_ImportLogFlags: 0
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 56
   m_LastFolders:
   - Assets/Level/Prefabs/Things/Morale Uppers
-  m_LastFoldersGridSize: -1
+  m_LastFoldersGridSize: 56
   m_LastProjectPath: "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2
     \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430
     \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman"
@@ -947,9 +947,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: d8640000
-    m_LastClickedID: 25816
-    m_ExpandedIDs: 000000008c6200008e62000090620000926200009462000096620000ba620000a263000000ca9a3bffffff7f
+    m_SelectedIDs: ec620000
+    m_LastClickedID: 25324
+    m_ExpandedIDs: 000000008e6200009062000092620000946200009662000098620000bc620000ee62000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -977,7 +977,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c6200008e62000090620000926200009462000096620000
+    m_ExpandedIDs: 000000008e6200009062000092620000946200009662000098620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1030,7 +1030,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 56
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &16

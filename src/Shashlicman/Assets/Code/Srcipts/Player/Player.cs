@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float health = 100.0f;
     [field: SerializeField] public float emotion_level { get; private set; } = 100.0f;
     [SerializeField] private float speed_change_emotion = 1.0f;
+    [SerializeField] private float min_speed_change_emotion = 0.2f;
     [SerializeField] private bool is_down_emotion_level = true;
 
     [SerializeField] private float weapon_speed_attack = 0.1f;
@@ -48,16 +50,19 @@ public class Player : MonoBehaviour
     private bool IsAvailable = true;
     private CircleCollider2D circleCollider;
 
-    private List<MoraleUpper> morales;
+    private List<String> morales;
 
     public bool is_dead { get { return health <= 0; } }
 
     public void addEmotionLevel (float add_emotion_level, MoraleUpper morale)
     {
         emotion_level += add_emotion_level;
-        morales.Add(morale);
-        int count_morale = morales.FindAll(obj => obj.name == morale.name).Count;
+        morales.Add(morale.name);
+        int count_morale = morales.FindAll(obj => obj == morale.name).Count;
+
         speed_change_emotion += count_morale * morale.coefficient_speed_change_emotion;
+        if (speed_change_emotion < min_speed_change_emotion) speed_change_emotion = min_speed_change_emotion;
+
         emotion_level -= count_morale * morale.coefficient_damage_added_morale;
 
         if (emotion_level > 100) emotion_level = 100; 
@@ -66,7 +71,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         circleCollider = gameObject.GetComponentInChildren<CircleCollider2D>();
-        morales = new List<MoraleUpper>();
+        morales = new List<String>();
     }
 
     void Update()

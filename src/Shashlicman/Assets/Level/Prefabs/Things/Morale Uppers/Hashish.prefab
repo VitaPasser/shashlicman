@@ -91,9 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6dbd34ee3c9595479132da002e8d52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  added_emotion_points: 40
-  <coefficient_speed_change_emotion>k__BackingField: 0.2
-  <coefficient_damage_added_morale>k__BackingField: 0.2
+  added_emotion_points: 60
+  <coefficient_speed_change_emotion>k__BackingField: 1.2
+  <coefficient_damage_added_morale>k__BackingField: 12
 --- !u!1 &7207507463233562863
 GameObject:
   m_ObjectHideFlags: 0
