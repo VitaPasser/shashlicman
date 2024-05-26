@@ -779,6 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Restart: {fileID: 626451488}
   player: {fileID: 7873292123421261737, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
+  covers: {fileID: 0}
 --- !u!1 &577638111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1225,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1671017408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1460288432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460288434}
+  - component: {fileID: 1460288433}
+  - component: {fileID: 1460288435}
+  m_Layer: 0
+  m_Name: Covers
+  m_TagString: Covers
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1460288433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460288432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fac31db127f33d48918d736957fa29e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockPrefab: {fileID: 0}
+  minBlocks: 2
+  maxBlocks: 4
+  spawnAreaMin: {x: 0, y: 0}
+  spawnAreaMax: {x: 0, y: 0}
+  minDistance: 1.5
+  spawnedPositions: []
+--- !u!4 &1460288434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460288432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01, y: -0.21, z: -0.0003213663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1460288435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460288432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d7d238b7529cc498eae8bf12eb937a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coversPrefab: {fileID: 0}
+  minCovers: 2
+  maxCovers: 4
+  spawnAreaMin: {x: 0, y: 0}
+  spawnAreaMax: {x: 0, y: 0}
+  minDistance: 1.5
 --- !u!1 &1583775978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,3 +2268,4 @@ SceneRoots:
   - {fileID: 1772729732}
   - {fileID: 1671017408}
   - {fileID: 724407116809346216}
+  - {fileID: 1460288434}

@@ -6,6 +6,7 @@ public class Scene : MonoBehaviour
 {
     public GameObject Restart;
     public GameObject player;
+    public Covers covers;
 
     // Start is called before the first frame update
     [System.Obsolete]
@@ -22,6 +23,9 @@ public class Scene : MonoBehaviour
         {
             Instantiate(player, new Vector3(3.68f, 2.87f, 0.0167967f), Quaternion.identity);
         }
+
+        covers = GameObject.FindWithTag("Covers").GetComponent<Covers>();
+        covers.SpawnCovers();
     }
 
     // Update is called once per frame
