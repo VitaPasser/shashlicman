@@ -12,6 +12,10 @@ public class Scene : MonoBehaviour
     [System.Obsolete]
     void Start()
     {
+        covers = GameObject.FindWithTag("Covers").GetComponent<Covers>();
+        covers.SpawnCovers();
+
+
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
         if (objs.Length != 0 && objs[0].GetComponent<Player>().is_dead)
         {
@@ -23,9 +27,28 @@ public class Scene : MonoBehaviour
         {
             Instantiate(player, new Vector3(3.68f, 2.87f, 0.0167967f), Quaternion.identity);
         }
-
-        covers = GameObject.FindWithTag("Covers").GetComponent<Covers>();
-        covers.SpawnCovers();
+        if (objs.Length == 1)
+        {
+            Player playerComponent = objs[0].GetComponent<Player>();
+            switch (playerComponent.doorSide)
+            {
+                case "left":
+                    objs[0].transform.position = new Vector3(8f, -0.2f, 0);
+                    break;
+                case "right":
+                    objs[0].transform.position = new Vector3(-8f, -0.2f, 0);
+                    break;
+                case "up":
+                    objs[0].transform.position = new Vector3(0, -4.6f, 0);
+                    break;
+                case "down":
+                    objs[0].transform.position = new Vector3(0, 4.15f, 0);
+                    break;
+                default:
+                    Debug.LogError("Неверное значение doorSide: " + playerComponent.doorSide);
+                    break;
+            }
+        }
     }
 
     // Update is called once per frame
