@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\things\\abstractthing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\things\\abstractthing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|c:\\users\\vita\\documents\\\u043F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u043A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0440\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\shashlicman\\assets\\code\\srcipts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\player\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\player\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\things\\moraleupper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\things\\moraleupper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\level\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\level\\scene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|c:\\users\\vita\\documents\\\u043F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u043A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0440\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\shashlicman\\assets\\code\\srcipts\\things\\abstractthing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\things\\abstractthing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\things\\moraleupper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\things\\moraleupper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\dontdestroy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\level\\covers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\level\\covers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\assets\\code\\srcipts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9136034-17CC-FB6F-7389-06D4B8D0D81A}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\srcipts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MoraleUpper.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Things\\MoraleUpper.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\Things\\MoraleUpper.cs",
@@ -79,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Weapon.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Things\\Weapon.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\Things\\Weapon.cs",
@@ -91,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AbstractThing.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Things\\AbstractThing.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\Things\\AbstractThing.cs",
@@ -104,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\Enemy.cs",
@@ -112,24 +112,25 @@
               "RelativeToolTip": "Assets\\Code\\Srcipts\\Enemy.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T15:17:23.949Z"
+              "WhenOpened": "2024-05-25T15:17:23.949Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Scene.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Level\\Scene.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\Level\\Scene.cs",
               "ToolTip": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Level\\Scene.cs",
               "RelativeToolTip": "Assets\\Code\\Srcipts\\Level\\Scene.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwCQAAAAAAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwA4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-26T11:31:51.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Covers.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Level\\Covers.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\Level\\Covers.cs",
@@ -141,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DontDestroy.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\DontDestroy.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\DontDestroy.cs",
@@ -153,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Lose.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\UI\\Lose.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\UI\\Lose.cs",
@@ -171,20 +172,20 @@
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\Player\\Player.cs",
               "ToolTip": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Player\\Player.cs",
               "RelativeToolTip": "Assets\\Code\\Srcipts\\Player\\Player.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAUwCwAAABCAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAUwIUAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T10:44:51.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Movement.cs",
               "DocumentMoniker": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Player\\Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Srcipts\\Player\\Movement.cs",
               "ToolTip": "C:\\Users\\vita\\Documents\\\u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u043A\u0443\u043C\\2 \u041A\u0443\u0440\u0441\\4 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u043E\u0437\u0440\u043E\u0431\u043A\u0430 \u0456\u0433\u0440\u043E\u0432\u0438\u0445 \u0437\u0430\u0441\u0442\u043E\u0441\u0443\u0432\u0430\u043D\u044C\\shashlicman\\shashlicman\\src\\Shashlicman\\Assets\\Code\\Srcipts\\Player\\Movement.cs",
               "RelativeToolTip": "Assets\\Code\\Srcipts\\Player\\Movement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABAAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwEEAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T10:43:00.747Z",
               "EditorCaption": ""
