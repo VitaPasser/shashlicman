@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 
-public class RotateObjects : MonoBehaviour
+public class DoorsController : MonoBehaviour
 {
 
     private float openAngle = -90f;
@@ -26,7 +26,7 @@ public class RotateObjects : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Не найдено объектов с тегом 'Door'.");
+            Debug.LogError("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ 'Door'.");
         }
     }
 
@@ -43,7 +43,7 @@ public class RotateObjects : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Не найдено объектов с тегом 'Door'");
+            Debug.LogError("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ 'Door'");
         }
     }
 
@@ -64,14 +64,13 @@ public class RotateObjects : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.position = new Vector3(50, 0, 0);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            CloseDoors();
-            other.transform.position = new Vector3(0, 0, 0);
-
-
+            Debug.Log("enemy");
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            if (enemies.Length == 0)
+            {
+                OpenDoors();
+            }
         }
-
     }
 
 
