@@ -11,7 +11,7 @@ public class CkeckEnemies : MonoBehaviour
         {
             other.transform.position = new Vector3(50, 0, 0);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            //other.transform.position = new Vector3(0, 0, 0);
+            other.transform.position = new Vector3(0, 0, 0);
         }
     }
 }

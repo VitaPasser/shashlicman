@@ -26,7 +26,7 @@ public class DoorsController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Не найдено объектов с тегом 'Door'.");
+            Debug.LogError("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ 'Door'.");
         }
     }
 
@@ -43,7 +43,7 @@ public class DoorsController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Не найдено объектов с тегом 'Door'");
+            Debug.LogError("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ 'Door'");
         }
     }
 
