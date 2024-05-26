@@ -49,7 +49,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float weapon_damage_attack = 10.0f;
     private bool IsAvailable = true;
     private CircleCollider2D circleCollider;
-    public string doorSide;
 
     private List<String> morales;
 

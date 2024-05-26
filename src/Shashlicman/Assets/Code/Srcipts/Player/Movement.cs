@@ -40,44 +40,11 @@ public class Movement : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        if (player.is_dead)
-        {
-            movementDirection = Vector2.zero;
-        }
-        else
-        {
-            movementDirection = move();
-        }
-
-        //rb.velocity = checkObjectsOnVector(movementDirection * movementSpeed * useEvasion());
-        rb.velocity = movementDirection * movementSpeed * useEvasion();
-    }
-
-    private Vector2 checkObjectsOnVector(Vector2 vector)
-    {
-
-        var playerVector2 = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
-        float size_y = Vector2.Distance(playerVector2, vector);
-
-        RaycastHit2D hit = Physics2D.Raycast(playerVector2, vector, size_y);
-
-        //hit.
-
-        if(hit.collider == null)
-        {
-            return vector;
-        }
-
-        return hit.point;
-    }
-
     private Vector2 move()
     {
         float power_control_level = customExp(control_level);
 
-        float evasion_coefficient = 1;
+        float evasion_coefficient = useEvasion();
 
         float x_player = evasion_coefficient * moveCoefficientPlayer(Input.GetAxis("Horizontal"), power_control_level);
         float y_player = evasion_coefficient * moveCoefficientPlayer(Input.GetAxis("Vertical"), power_control_level);
@@ -85,7 +52,7 @@ public class Movement : MonoBehaviour
         float x_badSpirit = moveCoefficientBadSpirit(toVector(enemy.transform.position.x, player.transform.position.x), power_control_level);
         float y_badSpirit = moveCoefficientBadSpirit(toVector(enemy.transform.position.y, player.transform.position.y), power_control_level);
 
-        return normalisationVector(x_player, y_player, x_badSpirit, y_badSpirit).normalized;
+        return normalisationVector(x_player, y_player, x_badSpirit, y_badSpirit);
     }
 
     private float useEvasion()
@@ -139,6 +106,19 @@ public class Movement : MonoBehaviour
     private float customExp(float x)
     {
         return math.pow(customE, x);
+    }
+
+    private void FixedUpdate()
+    {
+        if (player.is_dead)
+        {
+            movementDirection = Vector2.zero;
+        } else
+        {
+            movementDirection = move();
+        }
+
+        rb.velocity = movementDirection * movementSpeed;
     }
 
     private Vector2 normalisationVector(float x_p, float y_p, float x_b, float y_b)
