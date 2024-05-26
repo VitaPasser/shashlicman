@@ -19,7 +19,7 @@ using UnityEngine.UI;
  ◦ атаки ближнього бою +
     ▪ Буде один Шампур як основна та єдина зброя. +
         ▪ Можливо його посилити отримаючі його з противників, але
-          зменшує швидкість атаки
+          зменшує швидкість атаки +-
 
  ◦ здоров’я +
 
@@ -43,20 +43,23 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed_change_emotion = 1.0f;
     [SerializeField] private bool is_down_emotion_level = true;
 
-    [SerializeField] private float weapon_level_upgrade = 1.0f;
     [SerializeField] private float weapon_speed_attack = 0.1f;
     [SerializeField] private float weapon_damage_attack = 10.0f;
+    private bool IsAvailable = true;
+    private CircleCollider2D circleCollider;
 
     public bool is_dead { get { return health <= 0; } }
 
     private void Start()
     {
+        circleCollider = gameObject.GetComponentInChildren<CircleCollider2D>();
     }
 
     void Update()
     {
         changeEmotionTime();
         if (Input.GetKeyUp(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (Input.GetKeyUp(KeyCode.U)) upgradeWeapon(0.1f, 10f);
     }
 
     private void FixedUpdate()
@@ -64,37 +67,44 @@ public class Player : MonoBehaviour
         attack();
     }
 
+    public void upgradeWeapon(float weapon_coefficient_speed_attack, float weapon_coefficient_damage_attack)
+    {
+        weapon_speed_attack += weapon_coefficient_speed_attack;
+        weapon_damage_attack += weapon_coefficient_damage_attack;
+    }
 
-
+    public void getHeal(float heal_points)
+    {
+        health += heal_points;
+        if (health >= 100)  health = 100;
+    }
     void attack()
     {
-        if (!Input.GetButton("Attack1")) return;
-
-        CircleCollider2D cc = this.gameObject.transform.GetChild(1).GetComponent<CircleCollider2D>();
+        if (!Input.GetButton("Attack1") || IsAvailable == false) return;
 
         var horizontal_attack = Input.GetAxis("Horizontal");
         var vertical_attack = Input.GetAxis("Vertical");
 
-        var offset_value = math.max(math.abs(cc.offset.x), math.abs(cc.offset.y));
+        var offset_value = math.max(math.abs(circleCollider.offset.x), math.abs(circleCollider.offset.y));
 
         if (math.abs(horizontal_attack) > math.abs(vertical_attack))
         {
             if (horizontal_attack > 0)
             {
-                cc.offset = new Vector2(math.abs(offset_value), 0);
+                circleCollider.offset = new Vector2(math.abs(offset_value), 0);
             } else if (horizontal_attack < 0)
             {
-                cc.offset = new Vector2(-math.abs(offset_value), 0);
+                circleCollider.offset = new Vector2(-math.abs(offset_value), 0);
             }
         } else if (math.abs(horizontal_attack) < math.abs(vertical_attack))
         {
             if (vertical_attack > 0)
             {
-                cc.offset = new Vector2(0, math.abs(offset_value));
+                circleCollider.offset = new Vector2(0, math.abs(offset_value));
             }
             else if (vertical_attack < 0)
             {
-                cc.offset = new Vector2(0, -math.abs(offset_value));
+                circleCollider.offset = new Vector2(0, -math.abs(offset_value));
             }
         }
 
@@ -102,12 +112,28 @@ public class Player : MonoBehaviour
         ContactFilter2D filter2D = new ContactFilter2D();
         filter2D.minDepth = 0;
         filter2D.maxDepth = 1;
-        cc.OverlapCollider(filter2D, colliders);
+        circleCollider.OverlapCollider(filter2D, colliders);
         colliders.RemoveAll(item => item.GetComponent<Enemy>() == null);
 
-        // Метод получения урона противником
+        StartCoroutine(StartCooldownAttaked(colliders));
 
         Debug.Log(colliders.Count);
+    }
+
+    public IEnumerator StartCooldownAttaked(List<Collider2D> colliders)
+    {
+        IsAvailable = false;
+
+        yield return new WaitForSeconds(weapon_speed_attack);
+
+        foreach (Collider2D collider in colliders) 
+        {
+            // Метод получения урона противником;
+            // collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack);
+            Debug.Log("БЬЮТ!");
+        }
+
+        IsAvailable = true;
     }
 
     void changeEmotionTime()
