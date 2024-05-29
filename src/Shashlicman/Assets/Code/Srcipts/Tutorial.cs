@@ -13,6 +13,10 @@ public class TutorialManager : MonoBehaviour
     private bool isDialoguePlaying = false;
     private Player player;
 
+    AudioSource soundtrack;
+    public float MaxVolume = 0.8f;
+    public float MinVolume = 0.1f;
+
 
     private string[] tutorialMessages = {
         "Hallo mein Freund. Сьогодні я навчу тебе грати в шашличок",
@@ -26,6 +30,9 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
+        AudioSource soundtrack = GameObject.FindWithTag("SoundTrack").GetComponent<AudioSource>();
+        soundtrack.volume = MinVolume;
+
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
         audioSource = gameObject.AddComponent<AudioSource>();
         if (player.tutorial == true)
@@ -36,6 +43,9 @@ public class TutorialManager : MonoBehaviour
             isDialoguePlaying = true;
             PlayDialogueAudio();
             UpdateTextBackground();
+        } else
+        {
+            soundtrack.volume = MaxVolume;
         }
     }
 
@@ -65,6 +75,8 @@ public class TutorialManager : MonoBehaviour
         }
         isDialoguePlaying = false;
         player.tutorial = false;
+        AudioSource soundtrack = GameObject.FindWithTag("SoundTrack").GetComponent<AudioSource>();
+        soundtrack.volume = MaxVolume;
     }
 
     IEnumerator WaitAndShowNextMessage()

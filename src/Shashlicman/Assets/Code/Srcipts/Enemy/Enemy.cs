@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float hype_health_damage_attack = 2.0f;
     [SerializeField] private float movementSpeed = 2f;
     [SerializeField] private float movementSpeed_ = 2f;
+    [SerializeField] private Vector2 fixStuck = new Vector2(0, 0);
     [SerializeField] private bool isShoot = true;
     private Rigidbody2D rb;
     public bool is_dead { get { return health <= 0; } }
@@ -48,7 +49,7 @@ public class Enemy : MonoBehaviour
             Instantiate(weaponBuf, vector, Quaternion.identity);
         } else
         {
-            rb.velocity = move() * movementSpeed_;
+            rb.velocity = move() * movementSpeed_ + fixStuck * movementSpeed_;
 
             selectingHype();
             selectingShoot();
@@ -102,12 +103,22 @@ public class Enemy : MonoBehaviour
         {
             useTool = UseTool.gun;
             movementSpeed_ = movementSpeed;
-        } else
+        } else if (colliders.Count > 0)
         {
             useTool = UseTool.hype;
             movementSpeed_ = movementSpeed / 2;
             doHype();
+        } else
+        {
+            useTool = UseTool.gun;
+            movementSpeed_ = movementSpeed;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision != null) { fixStuck = Vector2.zero; return; }
+        fixStuck = new Vector2(Random.Range(-9, 9), Random.Range(-9, 9));
     }
 
     private Vector2 move()
@@ -159,6 +170,7 @@ public class Enemy : MonoBehaviour
     {
         if (!IsAvailableHype) return;
 
+        transform.GetChild(3).gameObject.SetActive(true);
 
         Vector2 near_target = nearTarget().normalized;
         Vector3 difference = new Vector3(near_target.x, near_target.y, 0) - rangeAttack.transform.position;
@@ -185,6 +197,8 @@ public class Enemy : MonoBehaviour
         IsAvailableHype = false;
 
         yield return new WaitForSeconds(hype_speed_attack);
+
+        transform.GetChild(3).gameObject.SetActive(false);
 
         IsAvailableHype = true;
 

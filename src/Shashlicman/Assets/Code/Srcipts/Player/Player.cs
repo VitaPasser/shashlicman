@@ -123,10 +123,6 @@ public class Player : MonoBehaviour
     {
         IsAvailable = false;
 
-        yield return new WaitForSeconds(weapon_speed_attack);
-
-        IsAvailable = true;
-
         if (colliders.Count > 0 && (null != colliders[0]))
         {
             foreach (Collider2D collider in colliders)
@@ -136,6 +132,10 @@ public class Player : MonoBehaviour
                 Debug.Log("БЬЮ!");
             }
         }
+
+        yield return new WaitForSeconds(weapon_speed_attack);
+
+        IsAvailable = true;
     }
 
     void changeEmotionTime()
