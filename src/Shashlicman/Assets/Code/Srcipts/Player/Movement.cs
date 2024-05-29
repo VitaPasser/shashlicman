@@ -60,7 +60,7 @@ public class Movement : MonoBehaviour
 
         Vector2 playerv2 = new Vector2(moveCoefficientPlayer(Input.GetAxis("Horizontal"), power_control_level), moveCoefficientPlayer(Input.GetAxis("Vertical"), power_control_level));
 
-        Vector2 badSpiritv = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        Vector2 badSpirit = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemys.Length > 0)
         {
@@ -72,16 +72,20 @@ public class Movement : MonoBehaviour
                 scalars.Add(enemy.transform.position - gameObject.transform.position);
             }
 
-            badSpiritv = scalars.Min();
+            badSpirit = scalars[0];
+            foreach (Vector2 enemy in scalars)
+            {
+                badSpirit = Vector2.Min(enemy, badSpirit);
+            }
         }
 
-        badSpiritv.Normalize();
+        badSpirit.Normalize();
 
-        badSpiritv = new Vector2(moveCoefficientBadSpirit(badSpiritv.x, power_control_level), moveCoefficientBadSpirit(badSpiritv.y, power_control_level));
-        badSpiritv.x *= Random.Range(-1f, 9f);
-        badSpiritv.y *= Random.Range(-1f, 9f);
+        badSpirit = new Vector2(moveCoefficientBadSpirit(badSpirit.x, power_control_level), moveCoefficientBadSpirit(badSpirit.y, power_control_level));
+        badSpirit.x *= Random.Range(-1f, 9f);
+        badSpirit.y *= Random.Range(-1f, 9f);
 
-        return badSpiritv + playerv2;
+        return badSpirit + playerv2;
     }
 
     private float useEvasion()

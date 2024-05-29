@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float weapon_damage_attack = 10.0f;
     [SerializeField] private float hype_speed_attack = 0.1f;
     [SerializeField] private float hype_damage_attack = 10.0f;
+    private Rigidbody2D rb;
     public bool is_dead { get { return health <= 0; } }
     NavMeshAgent agent;
     void Start()
@@ -17,6 +18,8 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        rb = GetComponent<Rigidbody2D>();
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
     }
 

@@ -27,11 +27,12 @@ public class Scene : MonoBehaviour
             Instantiate(playerPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
         }
 
-        /*GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemys.Length != 0)
         {
             Restart.SetActiveRecursively(false);
-            foreach (GameObject enemy in enemys) {
+            foreach (GameObject enemy in enemys)
+            {
                 Destroy(enemy);
             }
 
@@ -47,7 +48,7 @@ public class Scene : MonoBehaviour
             {
                 Instantiate(enemyPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
             }
-        }*/
+        }
 
         Instantiate(enemyPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
         covers = GameObject.FindWithTag("Covers").GetComponent<Covers>();
