@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3639031243605158752}
   m_Layer: 0
   m_Name: WeaponUpgrade
-  m_TagString: Untagged
+  m_TagString: Items
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

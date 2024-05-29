@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float evasion_speed_coefficient = 40f;
     [SerializeField] private float evasion_cooldown_period = 1f;
     private bool IsAvailable = true;
-    public LayerMask myLayerMask;
+    [SerializeField] private LayerMask myLayerMask;
 
     private void Start()
     {
