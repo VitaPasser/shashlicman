@@ -60,15 +60,22 @@ public class Movement : MonoBehaviour
 
         Vector2 playerv2 = new Vector2(moveCoefficientPlayer(Input.GetAxis("Horizontal"), power_control_level), moveCoefficientPlayer(Input.GetAxis("Vertical"), power_control_level));
 
+        Vector2 badSpiritv = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
-        List<Vector2> scalars = new List<Vector2>(); 
-
-        foreach (GameObject enemy in enemys)
+        if (enemys.Length > 0)
         {
-            scalars.Add(enemy.transform.position - gameObject.transform.position);
+
+            List<Vector2> scalars = new List<Vector2>(); 
+
+            foreach (GameObject enemy in enemys)
+            {
+                scalars.Add(enemy.transform.position - gameObject.transform.position);
+            }
+
+            badSpiritv = scalars.Min();
         }
 
-        Vector2 badSpiritv = scalars.Max().normalized;
+        badSpiritv.Normalize();
 
         badSpiritv = new Vector2(moveCoefficientBadSpirit(badSpiritv.x, power_control_level), moveCoefficientBadSpirit(badSpiritv.y, power_control_level));
         badSpiritv.x *= Random.Range(-1f, 9f);

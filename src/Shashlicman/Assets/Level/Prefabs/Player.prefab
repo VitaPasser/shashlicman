@@ -211,7 +211,7 @@ MonoBehaviour:
   speed_change_emotion: 1
   min_speed_change_emotion: 0.2
   is_down_emotion_level: 0
-  weapon_speed_attack: 0.1
+  weapon_speed_attack: 1
   weapon_damage_attack: 10
 --- !u!114 &2437449090373039560
 MonoBehaviour:
@@ -226,7 +226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  enemy: {fileID: 3494020887542723793, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
   evasion_speed_coefficient: 40
   evasion_cooldown_period: 1
   myLayerMask:

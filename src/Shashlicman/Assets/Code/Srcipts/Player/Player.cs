@@ -1,11 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 /*
  * Робив Віталій
@@ -148,7 +146,7 @@ public class Player : MonoBehaviour
         foreach (Collider2D collider in colliders) 
         {
             // Метод получения урона противником;
-            // collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack);
+            collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack);
             Debug.Log("БЬЮТ!");
         }
 

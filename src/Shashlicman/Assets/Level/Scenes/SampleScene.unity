@@ -726,7 +726,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Restart: {fileID: 626451488}
-  player: {fileID: 7873292123421261737, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
+  playerPrefab: {fileID: 7873292123421261737, guid: 080a3fe7736629a46a91a03e84dad6b9, type: 3}
+  enemyPrefab: {fileID: 4725682050834792115, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
+  countStartCreateEnemyMin: 2
+  countStartCreateEnemyMax: 6
 --- !u!1 &626451488 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3743792686548683553, guid: 804a7336153f2ba459d0edadb1855a74, type: 3}
@@ -1689,63 +1692,6 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!1001 &1807303869
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.79823
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.8066776
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.016796697
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3599781781650786500, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4725682050834792115, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
 --- !u!1001 &1977907715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2086,7 +2032,6 @@ SceneRoots:
   - {fileID: 1238828386}
   - {fileID: 1679530123}
   - {fileID: 1596438983}
-  - {fileID: 1807303869}
   - {fileID: 877946882}
   - {fileID: 1977907715}
   - {fileID: 328529754}

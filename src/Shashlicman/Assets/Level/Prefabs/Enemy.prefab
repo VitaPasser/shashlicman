@@ -119,6 +119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1944c4b46b94e1b4888e331132052cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponBuf: {fileID: 511420847165594177, guid: 8a39325b66cfa3d40ad48a2c5e93c87d, type: 3}
+  health: 100
+  weapon_speed_attack: 0.1
+  weapon_damage_attack: 10
+  hype_speed_attack: 0.1
+  hype_damage_attack: 10
 --- !u!1 &8484281234337751907
 GameObject:
   m_ObjectHideFlags: 0
