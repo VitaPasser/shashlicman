@@ -124,17 +124,17 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(weapon_speed_attack);
 
+        IsAvailable = true;
+
         if (colliders.Count > 0 && (null != colliders[0]))
         {
             foreach (Collider2D collider in colliders)
             {
                 // Метод получения урона противником;
                 collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack);
-                Debug.Log("БЬЮТ!");
+                Debug.Log("БЬЮ!");
             }
         }
-
-        IsAvailable = true;
     }
 
     void changeEmotionTime()
@@ -161,13 +161,13 @@ public class Player : MonoBehaviour
         emotion_level -= math.sqrt(damage);
     }
 
-    void getDamage(float damage)
+    public void getDamage(float damage)
     {
         changeEmotionDamage(damage);
         health -= damage;
     }
 
-    void getEmotionDamage(float damage)
+    public void getEmotionDamage(float damage)
     {
         emotion_level -= damage;
     }

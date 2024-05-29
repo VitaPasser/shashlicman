@@ -6,9 +6,9 @@ using System.Collections.Generic;
 public class RotateObjects : MonoBehaviour
 {
 
-    private float openAngle = -90f;
+    /*private float openAngle = -90f;
 
-    private float closeAngle = 0f;
+    private float closeAngle = 0f;*/
     [SerializeField] private bool isOpen = false;
     [SerializeField] private DirectionDoor directionDoor;
     private enum DirectionDoor

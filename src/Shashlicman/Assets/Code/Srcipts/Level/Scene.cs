@@ -50,7 +50,6 @@ public class Scene : MonoBehaviour
             }
         }
 
-        Instantiate(enemyPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
         covers = GameObject.FindWithTag("Covers").GetComponent<Covers>();
         covers.SpawnCovers();
     }
