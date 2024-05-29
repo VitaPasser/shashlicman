@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
         direction = players[0].transform.position;
         Vector3 diference = new Vector3(direction.x, direction.y, 0) - transform.position;
         float rotateZ = Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotateZ);
+        transform.rotation = Quaternion.Euler(0f, 0f, rotateZ + 270);
 
         rb.velocity = transform.up * speed;
         Invoke("DestroyBullet", timeDestroy);

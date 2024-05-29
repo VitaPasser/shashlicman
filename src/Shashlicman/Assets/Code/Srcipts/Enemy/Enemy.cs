@@ -46,11 +46,13 @@ public class Enemy : MonoBehaviour
             Debug.Log(vector);
             GameObject.Destroy(gameObject);
             Instantiate(weaponBuf, vector, Quaternion.identity);
-        }
-        rb.velocity = move() * movementSpeed_;
+        } else
+        {
+            rb.velocity = move() * movementSpeed_;
 
-        selectingHype();
-        selectingShoot();
+            selectingHype();
+            selectingShoot();
+        }
     }
 
     private void selectingShoot()
@@ -59,18 +61,18 @@ public class Enemy : MonoBehaviour
 
         if (useTool == UseTool.gun && isShoot)
         {
-            doShoot();
+            doShoot(objs[0].GetComponent<Player>());
         }
 
     }
-    private void doShoot()
+    private void doShoot(Player player)
     {
         if (!IsAvailableShoot) return;
 
-        StartCoroutine(StartCooldownShoot());
+        StartCoroutine(StartCooldownShoot(player));
     }
 
-    public IEnumerator StartCooldownShoot()
+    public IEnumerator StartCooldownShoot(Player player)
     {
         IsAvailableShoot = false;
 
@@ -79,7 +81,7 @@ public class Enemy : MonoBehaviour
         IsAvailableShoot = true;
 
         // Метод получения урона противником;
-        Instantiate(bullet, gameObject.transform.position, Quaternion.identity);
+        Instantiate(bullet, gameObject.transform.position, player.gameObject.transform.rotation);
         Debug.Log("Стреляют!");
     }
 

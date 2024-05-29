@@ -258,7 +258,7 @@ MonoBehaviour:
   weaponBuf: {fileID: 511420847165594177, guid: 8a39325b66cfa3d40ad48a2c5e93c87d, type: 3}
   bullet: {fileID: 4439945299617195029, guid: fade6a810ab96e9409becde7d3e0c64b, type: 3}
   health: 100
-  weapon_speed_attack: 0.1
+  weapon_speed_attack: 2
   <weapon_damage_attack>k__BackingField: 10
   hype_speed_attack: 0.5
   hype_emotional_damage_attack: 5

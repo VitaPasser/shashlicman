@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
     }
     void attack()
     {
-        if (!(Input.GetButton("Attack1") && IsAvailable)) return;
+        if (!(Input.GetButton("Attack1") && IsAvailable && is_dead)) return;
 
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - circleCollider.transform.position;
         difference.Normalize();
