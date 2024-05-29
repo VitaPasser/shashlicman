@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6025749978036841906}
   - component: {fileID: 1756614436989798148}
   - component: {fileID: -2682851578749716832}
-  - component: {fileID: 4002166042005874650}
+  - component: {fileID: 8938426501423400213}
   m_Layer: 0
   m_Name: Cover
   m_TagString: Covers
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4002166042005874650
+--- !u!114 &8938426501423400213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,10 +140,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2246364182575570640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fa0352a4d56abd42ad2fc69deb72448, type: 3}
+  m_Script: {fileID: 11500000, guid: d5d7d238b7529cc498eae8bf12eb937a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Size: {x: 1.368951, y: 1.3236464, z: 4}
-  m_Center: {x: -0.00000017881393, y: 0.003960192, z: 0}
-  m_Area: 1
-  m_AffectedAgents: ffffffff
+  coversPrefab: {fileID: 2246364182575570640}
+  minCovers: 2
+  maxCovers: 4
+  spawnAreaMin: {x: -7, y: -5}
+  spawnAreaMax: {x: 7, y: 5}
+  minDistance: 1.5

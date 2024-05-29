@@ -126,9 +126,10 @@ public class Enemy : MonoBehaviour
         Instantiate(weaponBuf, vector, Quaternion.identity);
     }
 
-    public void getDamage(float damage)
+    public void getDamage(float damage, Vector2 position)
     {
         health -= damage;
+        transform.position = (transform.position + (transform.position - new Vector3(position.x, position.y, 0)));
     }
 
     private Vector2 nearTarget()

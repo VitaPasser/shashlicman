@@ -260,7 +260,7 @@ MonoBehaviour:
   health: 100
   weapon_speed_attack: 2
   <weapon_damage_attack>k__BackingField: 10
-  hype_speed_attack: 0.1
+  hype_speed_attack: 0.5
   hype_emotional_damage_attack: 5
   hype_health_damage_attack: 2
   movementSpeed: 2

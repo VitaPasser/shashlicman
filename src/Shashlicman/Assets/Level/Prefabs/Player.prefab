@@ -210,9 +210,10 @@ MonoBehaviour:
   <emotion_level>k__BackingField: 100
   speed_change_emotion: 1
   min_speed_change_emotion: 0.2
-  is_down_emotion_level: 1
+  is_down_emotion_level: 0
   weapon_speed_attack: 0.25
   weapon_damage_attack: 10
+  tutorial: 1
 --- !u!114 &2437449090373039560
 MonoBehaviour:
   m_ObjectHideFlags: 0
