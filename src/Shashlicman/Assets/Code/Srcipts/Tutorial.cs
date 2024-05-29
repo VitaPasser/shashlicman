@@ -34,6 +34,7 @@ public class TutorialManager : MonoBehaviour
             tutorialText.text = tutorialMessages[currentMessageIndex];
             tutorialText.gameObject.SetActive(true);
             isDialoguePlaying = true;
+            player.tutorial = false;
             PlayDialogueAudio();
             UpdateTextBackground();
         }
