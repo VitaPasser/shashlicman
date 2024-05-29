@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbd79e7a44e46847b4ec48baa14c7a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon_coefficient_speed_attack: 0.1
-  weapon_coefficient_damage_attack: 10
+  weapon_coefficient_speed_attack: 0.25
+  weapon_coefficient_damage_attack: 5
 --- !u!61 &3639031243605158752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e07fb46338eca5748b25934a022212e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

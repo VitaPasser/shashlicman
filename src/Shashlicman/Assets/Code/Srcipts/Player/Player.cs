@@ -80,8 +80,8 @@ public class Player : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
-        attack();
+    { 
+            attack();
     }
 
     public void upgradeWeapon(float weapon_coefficient_speed_attack, float weapon_coefficient_damage_attack)
@@ -97,33 +97,14 @@ public class Player : MonoBehaviour
     }
     void attack()
     {
-        if (!Input.GetButton("Attack1") || IsAvailable == false) return;
+        if (!(Input.GetButton("Attack1") && IsAvailable)) return;
 
-        var horizontal_attack = Input.GetAxis("Horizontal");
-        var vertical_attack = Input.GetAxis("Vertical");
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - circleCollider.transform.position;
+        difference.Normalize();
 
-        var offset_value = math.max(math.abs(circleCollider.offset.x), math.abs(circleCollider.offset.y));
+        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        circleCollider.transform.rotation = Quaternion.Euler(0f, 0f, rotZ+180);
 
-        if (math.abs(horizontal_attack) > math.abs(vertical_attack))
-        {
-            if (horizontal_attack > 0)
-            {
-                circleCollider.offset = new Vector2(math.abs(offset_value), 0);
-            } else if (horizontal_attack < 0)
-            {
-                circleCollider.offset = new Vector2(-math.abs(offset_value), 0);
-            }
-        } else if (math.abs(horizontal_attack) < math.abs(vertical_attack))
-        {
-            if (vertical_attack > 0)
-            {
-                circleCollider.offset = new Vector2(0, math.abs(offset_value));
-            }
-            else if (vertical_attack < 0)
-            {
-                circleCollider.offset = new Vector2(0, -math.abs(offset_value));
-            }
-        }
 
         List<Collider2D> colliders = new List<Collider2D>();
         ContactFilter2D filter2D = new ContactFilter2D();
@@ -143,11 +124,14 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(weapon_speed_attack);
 
-        foreach (Collider2D collider in colliders) 
+        if (colliders.Count > 0 && (null != colliders[0]))
         {
-            // Метод получения урона противником;
-            collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack);
-            Debug.Log("БЬЮТ!");
+            foreach (Collider2D collider in colliders)
+            {
+                // Метод получения урона противником;
+                collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack);
+                Debug.Log("БЬЮТ!");
+            }
         }
 
         IsAvailable = true;

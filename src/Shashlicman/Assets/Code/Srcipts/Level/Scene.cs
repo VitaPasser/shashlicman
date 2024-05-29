@@ -7,8 +7,8 @@ public class Scene : MonoBehaviour
     public GameObject Restart;
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
-    public int countStartCreateEnemyMin = 2;
-    public int countStartCreateEnemyMax = 6;
+    public int minCountStartCreateEnemy = 2;
+    public int maxCountStartCreateEnemy = 6;
     private Covers covers;
 
     // Start is called before the first frame update
@@ -36,7 +36,7 @@ public class Scene : MonoBehaviour
                 Destroy(enemy);
             }
 
-            for (int i = countStartCreateEnemyMin; i <= countStartCreateEnemyMax; i++)
+            for (int i = 0; i < Random.Range(minCountStartCreateEnemy, maxCountStartCreateEnemy); i++)
             {
                 Instantiate(enemyPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
             }
@@ -44,7 +44,7 @@ public class Scene : MonoBehaviour
         }
         if (enemys.Length == 0)
         {
-            for (int i = countStartCreateEnemyMin; i <= countStartCreateEnemyMax; i++)
+            for (int i = 0; i < Random.Range(minCountStartCreateEnemy, maxCountStartCreateEnemy); i++)
             {
                 Instantiate(enemyPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
             }

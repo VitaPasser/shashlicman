@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d95bf55ee46dd4a448fbd0d8bd4c5a0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -154,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03013435, y: 0.060110092}
+  m_Offset: {x: 0.018487245, y: 0.060110092}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.90587586, y: 1.3808889}
+  m_Size: {x: 0.60305256, y: 1.3808889}
   m_EdgeRadius: 0
 --- !u!50 &7518182147866852089
 Rigidbody2D:
@@ -210,8 +210,8 @@ MonoBehaviour:
   <emotion_level>k__BackingField: 100
   speed_change_emotion: 1
   min_speed_change_emotion: 0.2
-  is_down_emotion_level: 0
-  weapon_speed_attack: 1
+  is_down_emotion_level: 1
+  weapon_speed_attack: 0.25
   weapon_damage_attack: 10
 --- !u!114 &2437449090373039560
 MonoBehaviour:
@@ -271,8 +271,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2099677725850733022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

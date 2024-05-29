@@ -79,11 +79,11 @@ public class Movement : MonoBehaviour
             }
         }
 
+        badSpirit.x *= Random.Range(-1f, 9f);
+        badSpirit.y *= Random.Range(-1f, 9f);
         badSpirit.Normalize();
 
         badSpirit = new Vector2(moveCoefficientBadSpirit(badSpirit.x, power_control_level), moveCoefficientBadSpirit(badSpirit.y, power_control_level));
-        badSpirit.x *= Random.Range(-1f, 9f);
-        badSpirit.y *= Random.Range(-1f, 9f);
 
         return badSpirit + playerv2;
     }
