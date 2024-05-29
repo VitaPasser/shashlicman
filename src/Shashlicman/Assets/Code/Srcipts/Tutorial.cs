@@ -16,10 +16,10 @@ public class TutorialManager : MonoBehaviour
 
     private string[] tutorialMessages = {
         "Hallo mein Freund. Сьогодні я навчу тебе грати в шашличок",
-        "Роздупляйся швидко, а не то помреш",
-        "Ходи на WASD, бий на ЛКМ, дешся на ПКМ",
+        "Роздупляйся швидко, або помреш",
+        "Ходи на WASD, удар на ЛКМ, дешся на ПКМ",
         "Раджу збирати моральні бустери та ліки, бо буде складно",
-        "Viel Glück"
+        "Viel Gluck!"
     };
 
     private int currentMessageIndex = 0;

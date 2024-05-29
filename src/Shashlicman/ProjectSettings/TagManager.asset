@@ -8,6 +8,9 @@ TagManager:
   - Door
   - Enemy
   - Items
+  - Health
+  - Mind
+  - Damage
   layers:
   - Default
   - TransparentFX

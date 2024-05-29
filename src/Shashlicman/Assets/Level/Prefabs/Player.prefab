@@ -214,6 +214,9 @@ MonoBehaviour:
   weapon_speed_attack: 0.25
   weapon_damage_attack: 10
   tutorial: 1
+  healthTextInstance: {fileID: 0}
+  mindTextInstance: {fileID: 0}
+  damageTextInstance: {fileID: 0}
 --- !u!114 &2437449090373039560
 MonoBehaviour:
   m_ObjectHideFlags: 0
