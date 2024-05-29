@@ -162,7 +162,7 @@ MonoBehaviour:
   speed: 3
   damage: 5
   direction: {x: 0, y: 0}
-  enemy: {fileID: 3494020887542723793, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
+  enemy: {fileID: 760559305806699486, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}
 --- !u!70 &3650853093877418512
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

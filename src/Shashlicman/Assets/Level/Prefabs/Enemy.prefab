@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 3599781781650786500}
   - component: {fileID: 4443948229793205892}
   - component: {fileID: 4936650415637576675}
-  - component: {fileID: 3494020887542723793}
+  - component: {fileID: 760559305806699486}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -243,7 +243,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &3494020887542723793
+--- !u!114 &760559305806699486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4725682050834792115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1944c4b46b94e1b4888e331132052cae, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b18ea99415c69640821c21ac15cb8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponBuf: {fileID: 511420847165594177, guid: 8a39325b66cfa3d40ad48a2c5e93c87d, type: 3}
@@ -260,7 +260,7 @@ MonoBehaviour:
   health: 100
   weapon_speed_attack: 2
   <weapon_damage_attack>k__BackingField: 10
-  hype_speed_attack: 0.5
+  hype_speed_attack: 0.1
   hype_emotional_damage_attack: 5
   hype_health_damage_attack: 2
   movementSpeed: 2

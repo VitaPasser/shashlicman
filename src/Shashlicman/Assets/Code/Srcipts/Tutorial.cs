@@ -11,6 +11,8 @@ public class TutorialManager : MonoBehaviour
     private GameObject backObject;
     private AudioSource audioSource;
     private bool isDialoguePlaying = false;
+    private Player player;
+
 
     private string[] tutorialMessages = {
         "Hallo mein Freund. Сьогодні я навчу тебе грати в шашличок",
@@ -24,16 +26,17 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
         audioSource = gameObject.AddComponent<AudioSource>();
-        if (tutorialText != null)
+        if (player.tutorial == true)
         {
             backObject = Instantiate(textBackground, new Vector3(0, -4.5f, 0), Quaternion.identity);
             tutorialText.text = tutorialMessages[currentMessageIndex];
             tutorialText.gameObject.SetActive(true);
             isDialoguePlaying = true;
             PlayDialogueAudio();
+            UpdateTextBackground();
         }
-        UpdateTextBackground();
     }
 
     void Update()
@@ -42,6 +45,26 @@ public class TutorialManager : MonoBehaviour
         {
             StartCoroutine(WaitAndShowNextMessage());
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            StopTutorial();
+        }
+    }
+
+    void StopTutorial()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        tutorialText.gameObject.SetActive(false);
+        if (backObject != null)
+        {
+            Destroy(backObject);
+        }
+        isDialoguePlaying = false;
+        player.tutorial = false;
     }
 
     IEnumerator WaitAndShowNextMessage()
@@ -64,8 +87,7 @@ public class TutorialManager : MonoBehaviour
             }
             else
             {
-                tutorialText.gameObject.SetActive(false);
-                Destroy(backObject);
+                StopTutorial();
             }
             UpdateTextBackground();
         }

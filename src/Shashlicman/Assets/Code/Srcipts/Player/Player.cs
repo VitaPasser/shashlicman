@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float weapon_speed_attack = 0.1f;
     [SerializeField] private float weapon_damage_attack = 10.0f;
+    public bool tutorial = true;
     private bool IsAvailable = true;
     private CircleCollider2D circleCollider;
 
@@ -97,7 +98,7 @@ public class Player : MonoBehaviour
     }
     void attack()
     {
-        if (!(Input.GetButton("Attack1") && IsAvailable && is_dead)) return;
+        if (!(Input.GetButton("Attack1") && IsAvailable && !is_dead)) return;
 
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - circleCollider.transform.position;
         difference.Normalize();

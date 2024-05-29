@@ -96,17 +96,17 @@ public class Enemy : MonoBehaviour
         rangeHypeSelect.OverlapCollider(filter2D, colliders);
         colliders.RemoveAll(item => item.GetComponent<Player>() == null);
 
-        int use = Random.Range(0, 1);
+        int use = Random.Range(0, 10);
 
         if (colliders.Count > 0 && (use == 1))
         {
-            useTool = UseTool.hype;
-            movementSpeed_ = movementSpeed/2; 
-            doHype();
-        } else
-        {
             useTool = UseTool.gun;
             movementSpeed_ = movementSpeed;
+        } else
+        {
+            useTool = UseTool.hype;
+            movementSpeed_ = movementSpeed / 2;
+            doHype();
         }
     }
 

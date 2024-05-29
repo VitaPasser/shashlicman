@@ -10,11 +10,14 @@ public class Scene : MonoBehaviour
     public int minCountStartCreateEnemy = 2;
     public int maxCountStartCreateEnemy = 6;
     private Covers covers;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     [System.Obsolete]
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length != 0 && players[0].GetComponent<Player>().is_dead)
         {
@@ -22,9 +25,14 @@ public class Scene : MonoBehaviour
             Destroy(players[0]);
             Instantiate(playerPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
         }
-        if (players.Length == 0 )
+        else if (players.Length == 0)
         {
             Instantiate(playerPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
+        }
+        else
+        {
+            Debug.Log("goal");
+            audioSource.Play();
         }
 
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
@@ -52,11 +60,13 @@ public class Scene : MonoBehaviour
 
         covers = GameObject.FindWithTag("Covers").GetComponent<Covers>();
         covers.SpawnCovers();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
