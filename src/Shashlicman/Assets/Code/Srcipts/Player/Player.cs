@@ -63,6 +63,9 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip[] hit_audioClips;
     [SerializeField] private AudioClip hit_miss_audioClips;
 
+    [SerializeField] private float levels_max = 10f;
+    [SerializeField] public float levels_going_now = 0f;
+
 
     private List<String> morales;
 
