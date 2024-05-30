@@ -94,8 +94,8 @@ MonoBehaviour:
   audioSourcePrefab: {fileID: 4867077186937686544, guid: 7bbb5a323cf1bc64f920721385157c22, type: 3}
   take_audioClips: {fileID: 8300000, guid: 4d447069b8242f24c816c78242657ade, type: 3}
   added_emotion_points: 40
-  <coefficient_speed_change_emotion>k__BackingField: 0.6
-  <coefficient_damage_added_morale>k__BackingField: 2.2
+  <coefficient_speed_change_emotion>k__BackingField: 0.9
+  <coefficient_damage_added_morale>k__BackingField: 2
 --- !u!1 &7207507463233562863
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,8 +123,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.04488893, y: 0.04488893, z: 0.04488893}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4011595362281045576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: cf89ccbf711c9f047954c3dd134f64a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4eb943ce6ab2e14eb0c61149118baa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

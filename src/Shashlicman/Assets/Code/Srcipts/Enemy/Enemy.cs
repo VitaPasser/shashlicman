@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     private bool IsAvailableShoot = true;
     private CircleCollider2D rangeAttack;
     private CircleCollider2D rangeHypeSelect;
+    private Animator anim;
     private enum UseTool
     {
         gun = 1,
@@ -40,6 +41,8 @@ public class Enemy : MonoBehaviour
         rangeAttack = gameObject.GetComponentsInChildren<CircleCollider2D>()[0];
         rangeHypeSelect = gameObject.GetComponentsInChildren<CircleCollider2D>()[1];
         movementSpeed_ = movementSpeed;
+        anim = GetComponentInChildren<Animator>();
+
     }
 
     private void FixedUpdate()
@@ -77,6 +80,54 @@ public class Enemy : MonoBehaviour
         } else
         {
             rb.velocity = move() * movementSpeed_ + fixStuck * movementSpeed_;
+
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
+
+            
+      
+
+
+            if (Mathf.Abs(transform.position.y - objs[0].transform.position.y) > 2.0f)
+            {
+                if (transform.position.y > objs[0].transform.position.y)
+                {
+                    anim.SetBool("isVverh", false);
+                    anim.SetBool("isVniz", true);
+                    anim.SetBool("isLeft", false);
+                    anim.SetBool("isRight", false);
+                }
+                else
+                {
+                    anim.SetBool("isVverh", true);
+                    anim.SetBool("isVniz", false);
+                    anim.SetBool("isRight", false);
+                    anim.SetBool("isLeft", false);
+                }
+            }
+            else
+            {   
+                if(transform.position.x > objs[0].transform.position.x)
+                {
+                    anim.SetBool("isLeft", true);
+                    anim.SetBool("isRight", false);
+                    anim.SetBool("isVverh", false);
+                    anim.SetBool("isVniz", false);
+                }
+                else
+                {
+                    anim.SetBool("isLeft", false);
+                    anim.SetBool("isRight", true);
+                    anim.SetBool("isVverh", false);
+                    anim.SetBool("isVniz", false);
+                }
+                        
+            }
+
+               
+       
+
+
+
 
             selectingHype();
             selectingShoot();
