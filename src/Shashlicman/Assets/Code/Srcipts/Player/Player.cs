@@ -59,6 +59,10 @@ public class Player : MonoBehaviour
     private TMP_Text mindText;
     private TMP_Text damageText;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip[] hit_audioClips;
+    [SerializeField] private AudioClip hit_miss_audioClips;
+
 
     private List<String> morales;
 
@@ -81,6 +85,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         circleCollider = gameObject.GetComponentInChildren<CircleCollider2D>();
         morales = new List<String>();
 
@@ -193,12 +198,20 @@ public class Player : MonoBehaviour
 
         if (colliders.Count > 0 && (null != colliders[0]))
         {
+
             foreach (Collider2D collider in colliders)
             {
+                int bit_sound_number = UnityEngine.Random.Range(0, hit_audioClips.Length - 1); 
+                audioSource.clip = hit_audioClips[bit_sound_number];
+                audioSource.Play();
                 // Метод получения урона противником;
                 collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack, transform.position);
                 Debug.Log("БЬЮ!");
             }
+        } else
+        {
+            audioSource.clip = hit_miss_audioClips;
+            audioSource.Play();
         }
 
         yield return new WaitForSeconds(weapon_speed_attack);

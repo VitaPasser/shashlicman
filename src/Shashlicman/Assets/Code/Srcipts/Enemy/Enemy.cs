@@ -30,6 +30,9 @@ public class Enemy : MonoBehaviour
         hype = 2
     }
     private UseTool useTool = UseTool.gun;
+
+    [SerializeField] private GameObject audioSourcePrefab;
+    [SerializeField] private AudioClip[] hit_audioClips;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -62,6 +65,13 @@ public class Enemy : MonoBehaviour
         {
             Vector3 vector = gameObject.transform.position;
             Debug.Log(vector);
+
+            GameObject gaudiosource_ = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
+            AudioSource audiosource = gaudiosource_.GetComponent<AudioSource>();
+            int sound_number = UnityEngine.Random.Range(0, hit_audioClips.Length - 1);
+            audiosource.clip = hit_audioClips[sound_number];
+            audiosource.Play();
+
             GameObject.Destroy(gameObject);
             Instantiate(weaponBuf, vector, Quaternion.identity);
         } else
@@ -155,7 +165,7 @@ public class Enemy : MonoBehaviour
     }
 
     public void getDamage(float damage, Vector2 position)
-    {
+    {   
         health -= damage;
         transform.position = (transform.position + (transform.position - new Vector3(position.x, position.y, 0)));
     }

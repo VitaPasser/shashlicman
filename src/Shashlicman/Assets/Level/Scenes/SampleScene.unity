@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -944,6 +945,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8a61c65f18d3e458c94d10619b7776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519786553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,8 +2489,9 @@ GameObject:
   - component: {fileID: 1928125275}
   - component: {fileID: 1928125274}
   - component: {fileID: 1928125276}
+  - component: {fileID: 1928125277}
   m_Layer: 0
-  m_Name: Agony - Shaslicman theme
+  m_Name: Music
   m_TagString: SoundTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2494,10 +2508,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 31c0cfbff75576040b4bac5d80707434, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2606,6 +2620,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e335ec9d9a38bf4b892517fed894c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1928125277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928125273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e686796966f5f7c49bb2941e7c48c9b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundtracks:
+  - {fileID: 8300000, guid: 31c0cfbff75576040b4bac5d80707434, type: 3}
+  - {fileID: 8300000, guid: 6fbe9471bc908124bae5bfcd2cfa2952, type: 3}
+  - {fileID: 8300000, guid: 392a32c9f578df343a634f70be1a95fa, type: 3}
+  - {fileID: 8300000, guid: b4a72a2e081a0ad48854ed105cd0fdc7, type: 3}
 --- !u!1 &2068275947
 GameObject:
   m_ObjectHideFlags: 0

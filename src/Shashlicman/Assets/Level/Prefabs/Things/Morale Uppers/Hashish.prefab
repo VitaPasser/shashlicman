@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6dbd34ee3c9595479132da002e8d52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSourcePrefab: {fileID: 4867077186937686544, guid: 7bbb5a323cf1bc64f920721385157c22, type: 3}
+  take_audioClips: {fileID: 8300000, guid: 4d447069b8242f24c816c78242657ade, type: 3}
   added_emotion_points: 60
   <coefficient_speed_change_emotion>k__BackingField: 1.2
   <coefficient_damage_added_morale>k__BackingField: 12

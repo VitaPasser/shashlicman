@@ -16,6 +16,8 @@ public abstract class AbstractThing : MonoBehaviour
     /*private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite sprite;*/
     private BoxCollider2D boxCollider;
+    [SerializeField] private GameObject audioSourcePrefab;
+    [SerializeField] private AudioClip take_audioClips;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,11 @@ public abstract class AbstractThing : MonoBehaviour
         {
             GameObject.Destroy(gameObject);
             changeStatePlayer(colliders[0].gameObject.GetComponent<Player>());
+
+            GameObject gaudiosource_ = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
+            AudioSource audiosource = gaudiosource_.GetComponent<AudioSource>();
+            audiosource.clip = take_audioClips;
+            audiosource.Play();
             Debug.Log("Взял");
         }
         
