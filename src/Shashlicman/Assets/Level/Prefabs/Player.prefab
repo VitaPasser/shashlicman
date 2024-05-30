@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3764730875404756996}
   - component: {fileID: 5570837122341050397}
+  - component: {fileID: 8191254700884373000}
   m_Layer: 2
   m_Name: 20240519_160159-removebg-preview
   m_TagString: Untagged
@@ -84,6 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8191254700884373000
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5980513155828915513}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6089db59b582a274dbf8ccb60cef849a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7873292123421261737
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +235,7 @@ MonoBehaviour:
   is_down_emotion_level: 1
   weapon_speed_attack: 0.25
   weapon_damage_attack: 10
+  tutorial: 1
 --- !u!114 &2437449090373039560
 MonoBehaviour:
   m_ObjectHideFlags: 0
