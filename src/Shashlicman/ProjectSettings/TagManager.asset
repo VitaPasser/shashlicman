@@ -9,6 +9,12 @@ TagManager:
   - Enemy
   - Items
   - SoundTrack
+  - Damage
+  - Mind
+  - Health
+  - Tutorial
+  - TutorialCanvas
+  - DialogBar
   layers:
   - Default
   - TransparentFX

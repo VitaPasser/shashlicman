@@ -11,7 +11,7 @@ public class TutorialManager : MonoBehaviour
     private GameObject backObject;
     private AudioSource audioSource;
     private bool isDialoguePlaying = false;
-    private Player player;
+    public bool enabled_tutorial = true;
 
     AudioSource soundtrack;
     public float MaxVolume = 0.8f;
@@ -33,15 +33,15 @@ public class TutorialManager : MonoBehaviour
         AudioSource soundtrack = GameObject.FindWithTag("SoundTrack").GetComponent<AudioSource>();
         soundtrack.volume = MinVolume;
 
-        player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        //player = GameObject.FindWithTag("Player").GetComponent<Player>();
         audioSource = gameObject.AddComponent<AudioSource>();
-        if (player.tutorial == true)
+        if (enabled_tutorial == true)
         {
             backObject = Instantiate(textBackground, new Vector3(0, -4.5f, 0), Quaternion.identity);
             tutorialText.text = tutorialMessages[currentMessageIndex];
             tutorialText.gameObject.SetActive(true);
             isDialoguePlaying = true;
-            player.tutorial = false;
+            enabled_tutorial = false;
             PlayDialogueAudio();
             UpdateTextBackground();
         } else
@@ -75,7 +75,7 @@ public class TutorialManager : MonoBehaviour
             Destroy(backObject);
         }
         isDialoguePlaying = false;
-        player.tutorial = false;
+        enabled_tutorial = false;
         AudioSource soundtrack = GameObject.FindWithTag("SoundTrack").GetComponent<AudioSource>();
         soundtrack.volume = MaxVolume;
     }

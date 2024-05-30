@@ -18,7 +18,37 @@ public class DontDestroy : MonoBehaviour
                 Destroy(soundtrack[i]);
             }
         }
-        
+
+        GameObject[] tutorials = GameObject.FindGameObjectsWithTag("Tutorial");
+
+        if (tutorials.Length > 1)
+        {
+            for (int i = 1; i < tutorials.Length; i++)
+            {
+                Destroy(tutorials[i]);
+            }
+        }
+
+        GameObject[] TutorialCanvas = GameObject.FindGameObjectsWithTag("TutorialCanvas");
+
+        if (TutorialCanvas.Length > 1)
+        {
+            for (int i = 1; i < TutorialCanvas.Length; i++)
+            {
+                Destroy(TutorialCanvas[i]);
+            }
+        }
+
+        GameObject[] DialogBar = GameObject.FindGameObjectsWithTag("DialogBar");
+
+        if (DialogBar.Length > 1)
+        {
+            for (int i = 1; i < DialogBar.Length; i++)
+            {
+                Destroy(DialogBar[i]);
+            }
+        }
+
 
         DontDestroyOnLoad(this.gameObject);
         //DontDestroyOnLoad(this.gameObject);

@@ -41,6 +41,23 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(transform.position.x > 7)
+        {
+            transform.position = new Vector3(7, transform.position.y, transform.position.z);
+        } else if (transform.position.x < -7)
+        {
+            transform.position = new Vector3(-7, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.y > 4)
+        {
+            transform.position = new Vector3(transform.position.x, 4, transform.position.z);
+        }
+        else if (transform.position.y < -4)
+        {
+            transform.position = new Vector3(transform.position.x, -4, transform.position.z);
+        }
+
         if (is_dead)
         {
             Vector3 vector = gameObject.transform.position;

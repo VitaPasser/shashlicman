@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float weapon_speed_attack = 0.1f;
     [SerializeField] private float weapon_damage_attack = 10.0f;
-    public bool tutorial = true;
     private bool IsAvailable = true;
     private CircleCollider2D circleCollider;
 
@@ -94,6 +93,24 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (transform.position.x > 7)
+        {
+            transform.position = new Vector3(7, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x < -7)
+        {
+            transform.position = new Vector3(-7, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.y > 4)
+        {
+            transform.position = new Vector3(transform.position.x, 4, transform.position.z);
+        }
+        else if (transform.position.y < -4)
+        {
+            transform.position = new Vector3(transform.position.x, -4, transform.position.z);
+        }
+
         changeEmotionTime();
         if (Input.GetKeyUp(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if (Input.GetKeyUp(KeyCode.U)) upgradeWeapon(0.1f, 10f);
