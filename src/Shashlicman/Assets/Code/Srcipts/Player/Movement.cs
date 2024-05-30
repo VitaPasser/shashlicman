@@ -29,6 +29,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private LayerMask myLayerMask;
     [SerializeField] private AudioClip[] evasion_audioClips; 
     private AudioSource audioSource;
+    private Animator anim;
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class Movement : MonoBehaviour
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         player = GetComponent<Player>();
         audioSource = GetComponent<AudioSource>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -55,6 +57,50 @@ public class Movement : MonoBehaviour
         }
 
         rb.velocity = movementDirection * movementSpeed * useEvasion();
+        DetermineDirection(rb.velocity);
+    }
+    void DetermineDirection(Vector2 direction)
+    {
+        float tolerance = 0.05f; // Пороговое значение для определения направления
+
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            if (direction.x > tolerance)
+            {
+                anim.SetBool("isLeft", false);
+                anim.SetBool("isRight", true);
+                anim.SetBool("isVverh", false);
+                anim.SetBool("isVniz", false);
+                Debug.Log("Moving Right");
+            }
+            else if (direction.x < -tolerance)
+            {
+                anim.SetBool("isLeft", true);
+                anim.SetBool("isRight", false);
+                anim.SetBool("isVverh", false);
+                anim.SetBool("isVniz", false);
+                Debug.Log("Moving Left");
+            }
+        }
+        else
+        {
+            if (direction.y > tolerance)
+            {
+                anim.SetBool("isVverh", true);
+                anim.SetBool("isVniz", false);
+                anim.SetBool("isRight", false);
+                anim.SetBool("isLeft", false);
+                Debug.Log("Moving Up");
+            }
+            else if (direction.y < -tolerance)
+            {
+                anim.SetBool("isVverh", false);
+                anim.SetBool("isVniz", true);
+                anim.SetBool("isRight", false);
+                anim.SetBool("isLeft", false);
+                Debug.Log("Moving Down");
+            }
+        }
     }
 
     private Vector2 move()

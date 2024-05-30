@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
     private TMP_Text healthText;
     private TMP_Text mindText;
     private TMP_Text damageText;
-
+    private Animator anim;
     private AudioSource audioSource;
     [SerializeField] private AudioClip[] hit_audioClips;
     [SerializeField] private AudioClip hit_miss_audioClips;
@@ -100,6 +100,7 @@ public class Player : MonoBehaviour
 
         GameObject damageObj = GameObject.FindWithTag("Damage");
         damageText = damageObj.GetComponent<TMP_Text>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -185,6 +186,7 @@ public class Player : MonoBehaviour
 
         circleCollider.transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 180);
 
+        GetDirectionFromAngle(rotZ);
 
         List<Collider2D> colliders = new List<Collider2D>();
         ContactFilter2D filter2D = new ContactFilter2D();
@@ -197,7 +199,30 @@ public class Player : MonoBehaviour
 
         Debug.Log(colliders.Count);
     }
+    void GetDirectionFromAngle(float angle)
+    {
+        if (Input.GetButton("Attack1"))
+        {
+            if (angle >= -45 && angle < 45)
+            {
+                anim.SetTrigger("isRightTrig");
 
+            }
+            else if (angle >= 45 && angle < 135)
+            {
+                anim.SetTrigger("isUpTrig");
+            }
+            else if (angle >= -135 && angle < -45)
+            {
+                anim.SetTrigger("isDownTrig");
+            }
+            else
+            {
+                anim.SetTrigger("isLeftTrig");
+            }
+        }
+
+    }
     public IEnumerator StartCooldownAttaked(List<Collider2D> colliders)
     {
         IsAvailable = false;

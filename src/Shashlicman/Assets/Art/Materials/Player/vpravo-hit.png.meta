@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6da53925d15129a49a0504a4e95115ea
+guid: aa1aed54178714d4fbfcac138ec7d65e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,11 +97,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pravo_0
+      name: vpravo-hit_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -111,18 +111,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1af22256bbe4a54fb3e887b02cb80c5
-      internalID: 310372239
+      spriteID: ff11da6d5e95b7f4f88e00b819b5a5f3
+      internalID: -1080911668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_1
+      name: vpravo-hit_1
       rect:
         serializedVersion: 2
         x: 260
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -132,18 +132,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0be47023ac0981e4b8b77f257030bcfc
-      internalID: -863185758
+      spriteID: fcafc45f8fa58e7489206e8461d09756
+      internalID: -1852262419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_2
+      name: vpravo-hit_2
       rect:
         serializedVersion: 2
         x: 520
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -153,18 +153,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba88db8af5bb0b84c916ab3af2491cea
-      internalID: -667455981
+      spriteID: a222ccdd1c2892a4a9802ca6fb8cb4ff
+      internalID: -1816210234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_3
+      name: vpravo-hit_3
       rect:
         serializedVersion: 2
         x: 780
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -174,18 +174,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e4bb73924ee4b6498bfea6a5debb732
-      internalID: -1828548670
+      spriteID: e069a6c1381919c45b6ba8a9c403e4fe
+      internalID: 1604914936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_4
+      name: vpravo-hit_4
       rect:
         serializedVersion: 2
         x: 1040
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -195,18 +195,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06beb5b9793f4a04bb7d6c770e07dfbb
-      internalID: 674139536
+      spriteID: 5ad2a41920e8d6b4a86e7fb8fd8290b0
+      internalID: -2042926474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_5
+      name: vpravo-hit_5
       rect:
         serializedVersion: 2
         x: 1300
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -216,18 +216,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b95e93daca9ef54e962bfc5df526825
-      internalID: 874038169
+      spriteID: fe74275663059f944999542ee1977d71
+      internalID: 1347701343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_6
+      name: vpravo-hit_6
       rect:
         serializedVersion: 2
         x: 1560
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -237,18 +237,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f86aee56c0fdf994da863b136725c850
-      internalID: 1289421984
+      spriteID: 1a4fe7e6b44ed3b43945290fd0d94764
+      internalID: 2030553748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_7
+      name: vpravo-hit_7
       rect:
         serializedVersion: 2
         x: 1820
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -258,18 +258,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18b5dbf337847b3428910d409398c490
-      internalID: -2110743123
+      spriteID: 40931f100557fe84c8eb38681382e990
+      internalID: -714123639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_8
+      name: vpravo-hit_8
       rect:
         serializedVersion: 2
         x: 2080
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -279,18 +279,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 140c4cf6d81c4334ca7330df15417d2f
-      internalID: 1379012781
+      spriteID: 7c9f4a442c3afd04c99eddb81835bcfd
+      internalID: 1870884292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_9
+      name: vpravo-hit_9
       rect:
         serializedVersion: 2
         x: 2340
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -300,18 +300,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05d56746259909e4bb4a2db0015ab4ac
-      internalID: -217509891
+      spriteID: f56b824f751c28e458bc1134d4303cb6
+      internalID: 1912604720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_10
+      name: vpravo-hit_10
       rect:
         serializedVersion: 2
         x: 2600
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -321,18 +321,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdce68de452201348a7292be611db303
-      internalID: 1507124929
+      spriteID: f1e21612a97ac7f42946c9f0b3378309
+      internalID: -211389440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_11
+      name: vpravo-hit_11
       rect:
         serializedVersion: 2
         x: 2860
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -342,18 +342,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab054edf102ae3244b664e6c32e44f98
-      internalID: 881646628
+      spriteID: 8d4fe11171029a44698c3298d5110067
+      internalID: -255375508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_12
+      name: vpravo-hit_12
       rect:
         serializedVersion: 2
         x: 3120
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -363,18 +363,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb7a050e90d6866418e744454049aeda
-      internalID: -1162658989
+      spriteID: 58578ccab78830e42ab0eb5e30416a2c
+      internalID: 916343571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pravo_13
+      name: vpravo-hit_13
       rect:
         serializedVersion: 2
         x: 3380
-        y: 0
+        y: 13
         width: 260
         height: 300
       alignment: 0
@@ -384,8 +384,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 112d06f35ec2f0d4ea8c2d595688833a
-      internalID: 747097627
+      spriteID: 6e545f66a5db98c4aba5a0787e0a92e9
+      internalID: -1075003231
       vertices: []
       indices: 
       edges: []
@@ -401,20 +401,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pravo_0: 310372239
-      pravo_1: -863185758
-      pravo_10: 1507124929
-      pravo_11: 881646628
-      pravo_12: -1162658989
-      pravo_13: 747097627
-      pravo_2: -667455981
-      pravo_3: -1828548670
-      pravo_4: 674139536
-      pravo_5: 874038169
-      pravo_6: 1289421984
-      pravo_7: -2110743123
-      pravo_8: 1379012781
-      pravo_9: -217509891
+      vpravo-hit_0: -1080911668
+      vpravo-hit_1: -1852262419
+      vpravo-hit_10: -211389440
+      vpravo-hit_11: -255375508
+      vpravo-hit_12: 916343571
+      vpravo-hit_13: -1075003231
+      vpravo-hit_2: -1816210234
+      vpravo-hit_3: 1604914936
+      vpravo-hit_4: -2042926474
+      vpravo-hit_5: 1347701343
+      vpravo-hit_6: 2030553748
+      vpravo-hit_7: -714123639
+      vpravo-hit_8: 1870884292
+      vpravo-hit_9: 1912604720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
