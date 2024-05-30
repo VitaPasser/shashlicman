@@ -241,6 +241,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 69d990f6cc2d81c4f9a96253934f43c9, type: 3}
   - {fileID: 8300000, guid: 8a063e81efa3efd41a33848887fa523f, type: 3}
   hit_miss_audioClips: {fileID: 8300000, guid: e51be5e832294ac429d292623a23cedf, type: 3}
+  <levels_max>k__BackingField: 3
+  levels_going_now: 0
 --- !u!114 &2437449090373039560
 MonoBehaviour:
   m_ObjectHideFlags: 0

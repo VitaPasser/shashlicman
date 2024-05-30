@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scene : MonoBehaviour
 {
@@ -36,7 +37,10 @@ public class Scene : MonoBehaviour
             Debug.Log("goal");
             audioSource.Play();
             GameObject[] playerss = GameObject.FindGameObjectsWithTag("Player");
-            playerss[0].GetComponent<Player>().levels_going_now++;
+            var player1 = playerss[0].GetComponent<Player>();
+            player1.levels_going_now++;
+            if (player1.levels_going_now == player1.levels_max)
+                SceneManager.LoadScene("EndTitles");
         }
 
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
