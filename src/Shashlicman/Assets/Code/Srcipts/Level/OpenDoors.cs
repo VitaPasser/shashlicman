@@ -27,7 +27,7 @@ public class RotateObjects : MonoBehaviour
         {
             /*door.rotation = Quaternion.Euler(0f, 0f, openAngle);
             door.localPosition = new Vector2(-1, 0);*/
-            door.GetComponent<SpriteRenderer>().enabled = false;
+            door.GetComponent<SpriteRenderer>().enabled = true;
             door.GetComponent<BoxCollider2D>().enabled = false;
             isOpen = true;   
         }
@@ -41,8 +41,8 @@ public class RotateObjects : MonoBehaviour
         {
             /*door.transform.rotation = Quaternion.Euler(0f, closeAngle, 0f);
             door.localPosition = new Vector2(0, -1);*/
-            door.GetComponent<SpriteRenderer>().enabled = true;
-            door.GetComponent<BoxCollider2D>().enabled = false;
+            door.GetComponent<SpriteRenderer>().enabled = false;
+            door.GetComponent<BoxCollider2D>().enabled = true;
             isOpen = false;
             
         }

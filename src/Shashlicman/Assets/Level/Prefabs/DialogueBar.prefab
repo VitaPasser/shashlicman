@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5445330301116682250}
   - component: {fileID: 4662787208885652374}
+  - component: {fileID: 54493503072723989}
   m_Layer: 0
   m_Name: DialogueBar
-  m_TagString: Untagged
+  m_TagString: DialogBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: e3f0a276f99848345afa29bb68b799cd, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.8784314}
   m_FlipX: 0
@@ -85,6 +86,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &54493503072723989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4993925993187071796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e335ec9d9a38bf4b892517fed894c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6202163951570772680
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +170,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 0bb6667c27791ff4b93eff5b8962ec1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

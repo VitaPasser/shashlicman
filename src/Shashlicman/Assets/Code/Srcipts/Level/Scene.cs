@@ -24,15 +24,18 @@ public class Scene : MonoBehaviour
             Restart.SetActiveRecursively(false);
             Destroy(players[0]);
             Instantiate(playerPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
+            GameObject[] playerss = GameObject.FindGameObjectsWithTag("Player");
         }
         else if (players.Length == 0)
         {
             Instantiate(playerPrefab, new Vector3(Random.Range(-7, 7), Random.Range(-4, 4), 0.0167967f), Quaternion.identity);
+            GameObject[] playerss = GameObject.FindGameObjectsWithTag("Player");
         }
         else
         {
             Debug.Log("goal");
             audioSource.Play();
+            GameObject[] playerss = GameObject.FindGameObjectsWithTag("Player");
         }
 
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");

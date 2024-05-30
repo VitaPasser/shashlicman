@@ -136,8 +136,8 @@ Transform:
   m_GameObject: {fileID: 7873292123421261737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.01}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3764730875404756996}
@@ -231,7 +231,7 @@ MonoBehaviour:
   health: 100
   <emotion_level>k__BackingField: 100
   speed_change_emotion: 1
-  min_speed_change_emotion: 0.2
+  min_speed_change_emotion: 0.1
   is_down_emotion_level: 1
   weapon_speed_attack: 0.25
   weapon_damage_attack: 10
@@ -266,7 +266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e335ec9d9a38bf4b892517fed894c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7873292123421261737}
 --- !u!1 &8443143578366559673
 GameObject:
   m_ObjectHideFlags: 0

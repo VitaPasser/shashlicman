@@ -11,31 +11,42 @@ public class TutorialManager : MonoBehaviour
     private GameObject backObject;
     private AudioSource audioSource;
     private bool isDialoguePlaying = false;
-    private Player player;
+    public bool enabled_tutorial = true;
+
+    AudioSource soundtrack;
+    public float MaxVolume = 0.8f;
+    public float MinVolume = 0.1f;
 
 
     private string[] tutorialMessages = {
         "Hallo mein Freund. Сьогодні я навчу тебе грати в шашличок",
-        "Роздупляйся швидко, а не то помреш",
-        "Ходи на WASD, бий на ЛКМ, дешся на ПКМ",
+        "Роздупляйся швидко, або помреш",
+        "Ходи на WASD, удар на ЛКМ, дешся на ПКМ",
         "Раджу збирати моральні бустери та ліки, бо буде складно",
-        "Viel Glück"
+        "Viel Gluck!"
     };
 
     private int currentMessageIndex = 0;
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        AudioSource soundtrack = GameObject.FindWithTag("SoundTrack").GetComponent<AudioSource>();
+        soundtrack.volume = MinVolume;
+
+        //player = GameObject.FindWithTag("Player").GetComponent<Player>();
         audioSource = gameObject.AddComponent<AudioSource>();
-        if (player.tutorial == true)
+        if (enabled_tutorial == true)
         {
             backObject = Instantiate(textBackground, new Vector3(0, -4.5f, 0), Quaternion.identity);
             tutorialText.text = tutorialMessages[currentMessageIndex];
             tutorialText.gameObject.SetActive(true);
             isDialoguePlaying = true;
+            enabled_tutorial = false;
             PlayDialogueAudio();
             UpdateTextBackground();
+        } else
+        {
+            soundtrack.volume = MaxVolume;
         }
     }
 
@@ -64,7 +75,9 @@ public class TutorialManager : MonoBehaviour
             Destroy(backObject);
         }
         isDialoguePlaying = false;
-        player.tutorial = false;
+        enabled_tutorial = false;
+        AudioSource soundtrack = GameObject.FindWithTag("SoundTrack").GetComponent<AudioSource>();
+        soundtrack.volume = MaxVolume;
     }
 
     IEnumerator WaitAndShowNextMessage()
