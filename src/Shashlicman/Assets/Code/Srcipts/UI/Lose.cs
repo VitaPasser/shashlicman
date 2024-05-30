@@ -20,7 +20,7 @@ public class Lose : MonoBehaviour
 
     // Update is called once per frame
     [System.Obsolete]
-    void FixedUpdate()
+    void Update()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
         if (objs.Length != 1) return;
@@ -35,7 +35,7 @@ public class Lose : MonoBehaviour
             player.transform.GetChild(0).gameObject.SetActive(false);
             //gameObject.GetComponentsInChildren<Transform>()[1].gameObject.SetActiveRecursively(true);
             //gameObject.SetActiveRecursively(true);
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKey(KeyCode.F))
             {
                 transform.GetChild(1).gameObject.SetActive(false);
                 //gameObject.GetComponentsInChildren<Transform>()[1].gameObject.SetActiveRecursively(false);
@@ -49,7 +49,7 @@ public class Lose : MonoBehaviour
             player.transform.GetChild(0).gameObject.SetActive(false);
             //gameObject.GetComponentsInChildren<Transform>()[0].gameObject.SetActiveRecursively(true);
             //gameObject.SetActiveRecursively(true);
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKey(KeyCode.F))
             {
                 transform.GetChild(0).gameObject.SetActive(false);
                 //gameObject.GetComponentsInChildren<Transform>()[0].gameObject.SetActiveRecursively(false);
