@@ -1694,7 +1694,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f3f68fb0ee73b2b44856c454033c007c, type: 3}
   - {fileID: 8300000, guid: c92ee78899107a044bfbaf57be178eca, type: 3}
   enabled_tutorial: 1
-  MaxVolume: 0.8
+  MaxVolume: 0.6
   MinVolume: 0.1
 --- !u!4 &1548656511
 Transform:

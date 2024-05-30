@@ -46,7 +46,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float weapon_speed_attack = 0.1f;
     [SerializeField] private float weapon_damage_attack = 10.0f;
+    [SerializeField] private float emotion_died_time = 10.0f;
     private bool IsAvailable = true;
+    private bool IsAvailableEmotionDead = true;
     private CircleCollider2D circleCollider;
 
     private GameObject healthObj;
@@ -61,6 +63,7 @@ public class Player : MonoBehaviour
     private List<String> morales;
 
     public bool is_dead { get { return health <= 0; } }
+    public bool is_emotion_dead { get { return emotion_level <= 0; } }
 
     public void addEmotionLevel(float add_emotion_level, MoraleUpper morale)
     {
@@ -93,11 +96,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x > 7)
+        if (transform.position.x > 7.5)
         {
             transform.position = new Vector3(7, transform.position.y, transform.position.z);
         }
-        else if (transform.position.x < -7)
+        else if (transform.position.x < -7.5)
         {
             transform.position = new Vector3(-7, transform.position.y, transform.position.z);
         }
@@ -130,6 +133,24 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         attack();
+        suicide();
+    }
+
+    private void suicide()
+    {
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
+        if (is_emotion_dead && (enemys.Length == 0) && IsAvailableEmotionDead) StartCooldownAttaked();
+    }
+
+    public IEnumerator StartCooldownAttaked()
+    {
+        IsAvailableEmotionDead = false;
+
+        yield return new WaitForSeconds(emotion_died_time);
+
+        if (is_emotion_dead)
+            health = 0;
+        IsAvailableEmotionDead = true;
     }
 
     public void upgradeWeapon(float weapon_coefficient_speed_attack, float weapon_coefficient_damage_attack)
