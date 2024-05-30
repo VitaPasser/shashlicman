@@ -15,7 +15,7 @@ public class SoundOneOff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayed && !m_AudioSource.isPlaying) Destroy(m_AudioSource);
+        if (m_AudioSource != null && isPlayed && !m_AudioSource.isPlaying) Destroy(m_AudioSource);
         if (!isPlayed)
         {
             m_AudioSource.Play();

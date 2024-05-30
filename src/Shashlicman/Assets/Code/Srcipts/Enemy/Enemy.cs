@@ -156,9 +156,12 @@ public class Enemy : MonoBehaviour
 
         IsAvailableShoot = true;
 
-        // Метод получения урона противником;
-        Instantiate(bullet, gameObject.transform.position, player.gameObject.transform.rotation);
-        Debug.Log("Стреляют!");
+        if (player != null) 
+        { 
+            // Метод получения урона противником;
+            Instantiate(bullet, gameObject.transform.position, player.gameObject.transform.rotation);
+            Debug.Log("Стреляют!");
+        }
     }
 
     private void selectingHype()

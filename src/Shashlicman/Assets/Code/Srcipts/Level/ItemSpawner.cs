@@ -23,7 +23,7 @@ public class ItemSpawner : MonoBehaviour
         for (int i = 0; i < itemCount; i++)
         {
 
-            GameObject itemPrefab = itemPrefabs[Random.Range(0, itemPrefabs.Count)];
+            GameObject itemPrefab = itemPrefabs[Random.Range(0, itemPrefabs.Count-1)];
 
 
             float spawnPosX = Random.Range(spawnAreaMin.x, spawnAreaMax.x);
