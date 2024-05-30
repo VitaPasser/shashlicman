@@ -27,12 +27,15 @@ public class Movement : MonoBehaviour
     [SerializeField] private float evasion_cooldown_period = 1f;
     private bool IsAvailable = true;
     [SerializeField] private LayerMask myLayerMask;
+    [SerializeField] private AudioClip[] evasion_audioClips; 
+    private AudioSource audioSource;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         player = GetComponent<Player>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -108,6 +111,10 @@ public class Movement : MonoBehaviour
     public IEnumerator StartCooldown()
     {
         IsAvailable = false;
+
+        int evasion_sound_number = UnityEngine.Random.Range(0, evasion_audioClips.Length - 1);
+        audioSource.clip = evasion_audioClips[evasion_sound_number];
+        audioSource.Play();
 
         yield return new WaitForSeconds(evasion_cooldown_period);
 

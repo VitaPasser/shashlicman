@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float weapon_speed_attack = 0.1f;
     [SerializeField] private float weapon_damage_attack = 10.0f;
-    [SerializeField] private float emotion_died_time = 10.0f;
+    [SerializeField] private float emotion_died_time = 1.0f;
     private bool IsAvailable = true;
     private bool IsAvailableEmotionDead = true;
     private CircleCollider2D circleCollider;
@@ -58,6 +58,13 @@ public class Player : MonoBehaviour
     private TMP_Text healthText;
     private TMP_Text mindText;
     private TMP_Text damageText;
+
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip[] hit_audioClips;
+    [SerializeField] private AudioClip hit_miss_audioClips;
+
+    [SerializeField] private float levels_max = 10f;
+    [SerializeField] public float levels_going_now = 0f;
 
 
     private List<String> morales;
@@ -81,6 +88,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         circleCollider = gameObject.GetComponentInChildren<CircleCollider2D>();
         morales = new List<String>();
 
@@ -139,10 +147,11 @@ public class Player : MonoBehaviour
     private void suicide()
     {
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
-        if (is_emotion_dead && (enemys.Length == 0) && IsAvailableEmotionDead) StartCooldownAttaked();
+        if (is_emotion_dead && (enemys.Length == 0) && IsAvailableEmotionDead)
+            StartCoroutine(StartCooldownSuicide());
     }
 
-    public IEnumerator StartCooldownAttaked()
+    public IEnumerator StartCooldownSuicide()
     {
         IsAvailableEmotionDead = false;
 
@@ -172,6 +181,8 @@ public class Player : MonoBehaviour
         difference.Normalize();
 
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+
+
         circleCollider.transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 180);
 
 
@@ -193,12 +204,20 @@ public class Player : MonoBehaviour
 
         if (colliders.Count > 0 && (null != colliders[0]))
         {
+
             foreach (Collider2D collider in colliders)
             {
+                int bit_sound_number = UnityEngine.Random.Range(0, hit_audioClips.Length - 1); 
+                audioSource.clip = hit_audioClips[bit_sound_number];
+                audioSource.Play();
                 // Метод получения урона противником;
                 collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack, transform.position);
                 Debug.Log("БЬЮ!");
             }
+        } else
+        {
+            audioSource.clip = hit_miss_audioClips;
+            audioSource.Play();
         }
 
         yield return new WaitForSeconds(weapon_speed_attack);

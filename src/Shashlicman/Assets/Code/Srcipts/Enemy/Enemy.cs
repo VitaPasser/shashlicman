@@ -24,12 +24,16 @@ public class Enemy : MonoBehaviour
     private bool IsAvailableShoot = true;
     private CircleCollider2D rangeAttack;
     private CircleCollider2D rangeHypeSelect;
+    private Animator anim;
     private enum UseTool
     {
         gun = 1,
         hype = 2
     }
     private UseTool useTool = UseTool.gun;
+
+    [SerializeField] private GameObject audioSourcePrefab;
+    [SerializeField] private AudioClip[] hit_audioClips;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,6 +41,8 @@ public class Enemy : MonoBehaviour
         rangeAttack = gameObject.GetComponentsInChildren<CircleCollider2D>()[0];
         rangeHypeSelect = gameObject.GetComponentsInChildren<CircleCollider2D>()[1];
         movementSpeed_ = movementSpeed;
+        anim = GetComponentInChildren<Animator>();
+
     }
 
     private void FixedUpdate()
@@ -62,16 +68,68 @@ public class Enemy : MonoBehaviour
         {
             Vector3 vector = gameObject.transform.position;
             Debug.Log(vector);
+
+            GameObject gaudiosource_ = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
+            AudioSource audiosource = gaudiosource_.GetComponent<AudioSource>();
+            int sound_number = UnityEngine.Random.Range(0, hit_audioClips.Length - 1);
+            audiosource.clip = hit_audioClips[sound_number];
+            audiosource.Play();
+
             GameObject.Destroy(gameObject);
             Instantiate(weaponBuf, vector, Quaternion.identity);
         } else
         {
             rb.velocity = move() * movementSpeed_ + fixStuck * movementSpeed_;
 
+            GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
+
+            if (Mathf.Abs(transform.position.y - objs[0].transform.position.y) > 2.0f)
+            {
+                if (transform.position.y > objs[0].transform.position.y)
+                {
+                    anim.SetBool("isVverh", false);
+                    anim.SetBool("isVniz", true);
+                    anim.SetBool("isLeft", false);
+                    anim.SetBool("isRight", false);
+                }
+                else
+                {
+                    anim.SetBool("isVverh", true);
+                    anim.SetBool("isVniz", false);
+                    anim.SetBool("isRight", false);
+                    anim.SetBool("isLeft", false);
+                }
+            }
+            else
+            {   
+                if(transform.position.x > objs[0].transform.position.x)
+                {
+                    anim.SetBool("isLeft", true);
+                    anim.SetBool("isRight", false);
+                    anim.SetBool("isVverh", false);
+                    anim.SetBool("isVniz", false);
+                }
+                else
+                {
+                    anim.SetBool("isLeft", false);
+                    anim.SetBool("isRight", true);
+                    anim.SetBool("isVverh", false);
+                    anim.SetBool("isVniz", false);
+                }
+                        
+            }
+
             selectingHype();
             selectingShoot();
         }
     }
+    
+    /*private void isDoHype()
+    {
+        if (IsAvailableHype) return;
+        rangeAttack.transform.localPosition;
+
+    }*/
 
     private void selectingShoot()
     {
@@ -155,7 +213,7 @@ public class Enemy : MonoBehaviour
     }
 
     public void getDamage(float damage, Vector2 position)
-    {
+    {   
         health -= damage;
         transform.position = (transform.position + (transform.position - new Vector3(position.x, position.y, 0)));
     }

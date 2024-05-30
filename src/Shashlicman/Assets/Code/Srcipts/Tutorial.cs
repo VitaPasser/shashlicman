@@ -20,7 +20,7 @@ public class TutorialManager : MonoBehaviour
 
     private string[] tutorialMessages = {
         "Hallo mein Freund. Сьогодні я навчу тебе грати в шашличок",
-        "Роздупляйся швидко, або помреш",
+        "Роздупляйся швидко, або помреш (Вийти з гри 'Esc')",
         "Ходи на WASD, удар на ЛКМ, дешся на ПКМ",
         "Раджу збирати моральні бустери та ліки, бо буде складно",
         "Viel Gluck!"

@@ -36,6 +36,7 @@ public class Scene : MonoBehaviour
             Debug.Log("goal");
             audioSource.Play();
             GameObject[] playerss = GameObject.FindGameObjectsWithTag("Player");
+            playerss[0].GetComponent<Player>().levels_going_now++;
         }
 
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
