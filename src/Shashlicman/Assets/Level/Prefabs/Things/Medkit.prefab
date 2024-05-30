@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSourcePrefab: {fileID: 4867077186937686544, guid: 7bbb5a323cf1bc64f920721385157c22, type: 3}
   take_audioClips: {fileID: 8300000, guid: 81c53bcad8f8bcd4797746e19b70bbf1, type: 3}
-  heal_health_points: 15
+  heal_health_points: 30
 --- !u!82 &602143067903453011
 AudioSource:
   m_ObjectHideFlags: 0

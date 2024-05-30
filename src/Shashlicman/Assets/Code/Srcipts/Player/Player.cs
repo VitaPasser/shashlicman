@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float weapon_speed_attack = 0.1f;
     [SerializeField] private float weapon_damage_attack = 10.0f;
-    [SerializeField] private float emotion_died_time = 10.0f;
+    [SerializeField] private float emotion_died_time = 1.0f;
     private bool IsAvailable = true;
     private bool IsAvailableEmotionDead = true;
     private CircleCollider2D circleCollider;
@@ -144,10 +144,11 @@ public class Player : MonoBehaviour
     private void suicide()
     {
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
-        if (is_emotion_dead && (enemys.Length == 0) && IsAvailableEmotionDead) StartCooldownAttaked();
+        if (is_emotion_dead && (enemys.Length == 0) && IsAvailableEmotionDead)
+            StartCoroutine(StartCooldownSuicide());
     }
 
-    public IEnumerator StartCooldownAttaked()
+    public IEnumerator StartCooldownSuicide()
     {
         IsAvailableEmotionDead = false;
 
@@ -177,6 +178,8 @@ public class Player : MonoBehaviour
         difference.Normalize();
 
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+
+
         circleCollider.transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 180);
 
 

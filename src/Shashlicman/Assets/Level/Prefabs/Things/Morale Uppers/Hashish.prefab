@@ -94,7 +94,7 @@ MonoBehaviour:
   audioSourcePrefab: {fileID: 4867077186937686544, guid: 7bbb5a323cf1bc64f920721385157c22, type: 3}
   take_audioClips: {fileID: 8300000, guid: 4d447069b8242f24c816c78242657ade, type: 3}
   added_emotion_points: 60
-  <coefficient_speed_change_emotion>k__BackingField: 1.2
+  <coefficient_speed_change_emotion>k__BackingField: 0.8
   <coefficient_damage_added_morale>k__BackingField: 12
 --- !u!1 &7207507463233562863
 GameObject:

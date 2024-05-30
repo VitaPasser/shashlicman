@@ -83,10 +83,6 @@ public class Enemy : MonoBehaviour
 
             GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
 
-            
-      
-
-
             if (Mathf.Abs(transform.position.y - objs[0].transform.position.y) > 2.0f)
             {
                 if (transform.position.y > objs[0].transform.position.y)
@@ -123,16 +119,17 @@ public class Enemy : MonoBehaviour
                         
             }
 
-               
-       
-
-
-
-
             selectingHype();
             selectingShoot();
         }
     }
+    
+    /*private void isDoHype()
+    {
+        if (IsAvailableHype) return;
+        rangeAttack.transform.localPosition;
+
+    }*/
 
     private void selectingShoot()
     {

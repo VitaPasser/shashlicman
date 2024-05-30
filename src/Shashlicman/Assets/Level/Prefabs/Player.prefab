@@ -231,8 +231,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   <emotion_level>k__BackingField: 100
-  speed_change_emotion: 1
-  min_speed_change_emotion: 0.1
+  speed_change_emotion: 0.3
+  min_speed_change_emotion: 0.01
   is_down_emotion_level: 1
   weapon_speed_attack: 0.25
   weapon_damage_attack: 10
