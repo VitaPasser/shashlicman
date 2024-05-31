@@ -236,7 +236,7 @@ public class Player : MonoBehaviour
                 audioSource.clip = hit_audioClips[bit_sound_number];
                 audioSource.Play();
                 // Метод получения урона противником;
-                collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack, transform.position);
+                collider.gameObject.GetComponent<Enemy>().getDamage(weapon_damage_attack/(levels_going_now*3+1), transform.position);
                 Debug.Log("БЬЮ!");
             }
         } else

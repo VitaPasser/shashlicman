@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSourcePrefab: {fileID: 4867077186937686544, guid: 7bbb5a323cf1bc64f920721385157c22, type: 3}
   take_audioClips: {fileID: 8300000, guid: 05cccc1032c1174479465c76609be6de, type: 3}
-  weapon_coefficient_speed_attack: 0.25
+  weapon_coefficient_speed_attack: 0.05
   weapon_coefficient_damage_attack: 5
 --- !u!61 &3639031243605158752
 BoxCollider2D:

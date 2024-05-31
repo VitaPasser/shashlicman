@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDestroy: 3
-  speed: 3
+  speed: 2
   damage: 5
   direction: {x: 0, y: 0}
   enemy: {fileID: 760559305806699486, guid: 6adcd855d97cf0d47877384aeac73710, type: 3}

@@ -236,7 +236,7 @@ MonoBehaviour:
   is_down_emotion_level: 1
   weapon_speed_attack: 0.25
   weapon_damage_attack: 10
-  emotion_died_time: 10
+  emotion_died_time: 3
   hit_audioClips:
   - {fileID: 8300000, guid: 69d990f6cc2d81c4f9a96253934f43c9, type: 3}
   - {fileID: 8300000, guid: 8a063e81efa3efd41a33848887fa523f, type: 3}

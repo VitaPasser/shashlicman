@@ -73,7 +73,7 @@ public class DestroyAll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!videoPlayer.isPlaying || Input.anyKey)
+        if (!videoPlayer.isPlaying || Input.GetKeyDown(KeyCode.Space))
         {
 
             Debug.Log("end");

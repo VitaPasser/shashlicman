@@ -22,7 +22,7 @@ public class Music : MonoBehaviour
         {
             while (numSoundtrackPlayWillBe == numSoundtrackPlay)
             {
-                numSoundtrackPlay = Random.Range(0, soundtracks.Length - 1);
+                numSoundtrackPlay = Random.Range(0, soundtracks.Length);
             }
 
             audioSource.clip = soundtracks[numSoundtrackPlay];
