@@ -158,7 +158,7 @@ public class Movement : MonoBehaviour
     {
         IsAvailable = false;
 
-        int evasion_sound_number = UnityEngine.Random.Range(0, evasion_audioClips.Length - 1);
+        int evasion_sound_number = UnityEngine.Random.Range(0, evasion_audioClips.Length);
         audioSource.clip = evasion_audioClips[evasion_sound_number];
         audioSource.Play();
 

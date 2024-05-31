@@ -232,7 +232,7 @@ public class Player : MonoBehaviour
 
             foreach (Collider2D collider in colliders)
             {
-                int bit_sound_number = UnityEngine.Random.Range(0, hit_audioClips.Length - 1); 
+                int bit_sound_number = UnityEngine.Random.Range(0, hit_audioClips.Length); 
                 audioSource.clip = hit_audioClips[bit_sound_number];
                 audioSource.Play();
                 // Метод получения урона противником;

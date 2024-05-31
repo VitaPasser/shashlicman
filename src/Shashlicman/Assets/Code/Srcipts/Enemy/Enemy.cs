@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour
 
             GameObject gaudiosource_ = Instantiate(audioSourcePrefab, transform.position, Quaternion.identity);
             AudioSource audiosource = gaudiosource_.GetComponent<AudioSource>();
-            int sound_number = UnityEngine.Random.Range(0, hit_audioClips.Length - 1);
+            int sound_number = UnityEngine.Random.Range(0, hit_audioClips.Length);
             audiosource.clip = hit_audioClips[sound_number];
             audiosource.Play();
 
